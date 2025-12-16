@@ -17,7 +17,7 @@ const Navigation = () => {
 
   const navLinks = [
     { href: "#experience", label: "Experience" },
-    { href: "#accommodations", label: "The Domes" },
+    { href: "#accommodations", label: "The Dome" },
     { href: "#amenities", label: "Amenities" },
     { href: "#location", label: "Location" },
   ];
@@ -34,8 +34,8 @@ const Navigation = () => {
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="font-serif text-2xl md:text-3xl tracking-wider text-foreground">
-            <span className="text-primary">Forêt</span> Dôme
+          <a href="#" className="font-serif text-2xl md:text-3xl tracking-wider text-primary">
+            Escapia
           </a>
 
           {/* Desktop Navigation */}

@@ -16,7 +16,6 @@ const Booking = () => {
     checkIn: "",
     checkOut: "",
     guests: "2",
-    dome: "solo",
     message: "",
   });
 
@@ -33,7 +32,6 @@ const Booking = () => {
       checkIn: "",
       checkOut: "",
       guests: "2",
-      dome: "solo",
       message: "",
     });
   };
@@ -64,8 +62,8 @@ const Booking = () => {
             Begin Your <span className="italic text-primary">Escape</span>
           </h2>
           <p className="text-lg text-muted-foreground font-light">
-            Due to our exclusive nature, we recommend booking at least 2 weeks in 
-            advance. Our team will personally confirm your reservation.
+            Our twin-dome sanctuary accommodates 2 guests. Due to our exclusive nature, 
+            we recommend booking at least 2 weeks in advance.
           </p>
         </motion.div>
 
@@ -138,8 +136,6 @@ const Booking = () => {
                 >
                   <option value="1">1 Guest</option>
                   <option value="2">2 Guests</option>
-                  <option value="3">3 Guests</option>
-                  <option value="4">4 Guests</option>
                 </select>
               </div>
             </div>
@@ -172,22 +168,6 @@ const Booking = () => {
                   className="w-full bg-background/50 border border-border/50 rounded px-4 py-3 text-foreground focus:border-primary/50 focus:outline-none transition-colors"
                 />
               </div>
-            </div>
-
-            {/* Dome Selection */}
-            <div className="space-y-2">
-              <label className="text-sm tracking-wider uppercase text-muted-foreground">
-                Select Accommodation
-              </label>
-              <select
-                name="dome"
-                value={formData.dome}
-                onChange={handleChange}
-                className="w-full bg-background/50 border border-border/50 rounded px-4 py-3 text-foreground focus:border-primary/50 focus:outline-none transition-colors"
-              >
-                <option value="solo">Solo Dome (€295/night)</option>
-                <option value="twin">Twin Domes (€495/night)</option>
-              </select>
             </div>
 
             {/* Message */}
