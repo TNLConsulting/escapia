@@ -45,7 +45,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-sm md:text-base tracking-[0.3em] uppercase text-primary mb-6"
         >
-          Lille, Belgium
+          A hideaway in nature
         </motion.p>
 
         <motion.h1
@@ -54,9 +54,9 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="font-serif text-5xl md:text-7xl lg:text-8xl font-light text-foreground mb-6 leading-tight"
         >
-          Escape Into
+          Disconnect to
           <br />
-          <span className="italic text-primary">Nature</span>
+          <span className="italic text-primary">Reconnect</span>
         </motion.h1>
 
         <motion.p
@@ -65,8 +65,8 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 font-light"
         >
-          Discover our exclusive moss-covered domes, where architecture meets forest 
-          and luxury meets wilderness.
+          Escape to our exclusive twin-dome sanctuary near Lille, Belgium — 
+          an intimate retreat for two, nestled deep in the forest.
         </motion.p>
 
         <motion.div
