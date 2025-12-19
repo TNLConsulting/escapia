@@ -25,8 +25,8 @@ const Location = () => {
                 Hidden in Plain <span className="italic text-primary">Sight</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Forêt Dôme is nestled within the forests surrounding Lille, offering 
-                the perfect balance of seclusion and accessibility. Just minutes from 
+                Escapia is nestled within the peaceful surroundings of Lille in Vlaams Gewest, 
+                offering the perfect balance of seclusion and accessibility. Just minutes from 
                 the city, yet worlds away from the everyday.
               </p>
             </div>
@@ -40,9 +40,9 @@ const Location = () => {
                 <div>
                   <h4 className="font-serif text-lg text-foreground mb-1">Address</h4>
                   <p className="text-sm text-muted-foreground">
-                    Forêt de Phalempin, 59133 Phalempin
+                    Bosuilweg 19, 2275 Lille
                     <br />
-                    Near Lille, Belgium
+                    Vlaams Gewest, Belgium
                   </p>
                 </div>
               </div>
@@ -54,7 +54,7 @@ const Location = () => {
                 <div>
                   <h4 className="font-serif text-lg text-foreground mb-1">By Train</h4>
                   <p className="text-sm text-muted-foreground">
-                    Lille-Flandres station: 20 minutes by car
+                    Antwerpen-Centraal station: 30 minutes by car
                     <br />
                     Complimentary pickup available
                   </p>
@@ -68,9 +68,9 @@ const Location = () => {
                 <div>
                   <h4 className="font-serif text-lg text-foreground mb-1">By Air</h4>
                   <p className="text-sm text-muted-foreground">
-                    Lille Airport (LIL): 25 minutes
+                    Antwerp Airport (ANR): 25 minutes
                     <br />
-                    Brussels Airport (BRU): 1 hour 15 minutes
+                    Brussels Airport (BRU): 45 minutes
                   </p>
                 </div>
               </div>
@@ -100,14 +100,14 @@ const Location = () => {
           >
             <div className="aspect-square rounded-lg overflow-hidden border border-border/30 bg-card">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40537.78731534!2d3.0!3d50.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d5943be30001%3A0x40099ab2f4d5530!2sFor%C3%AAt%20de%20Phalempin!5e0!3m2!1sen!2sfr!4v1702000000000!5m2!1sen!2sfr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.8!2d4.82!3d51.24!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c40e5c89c0e6ed%3A0x0!2sBosuilweg%2019%2C%202275%20Lille!5e0!3m2!1sen!2sbe!4v1702000000000!5m2!1sen!2sbe"
                 width="100%"
                 height="100%"
                 style={{ border: 0, filter: "invert(0.9) hue-rotate(180deg) saturate(0.3)" }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Forêt Dôme Location"
+                title="Escapia Location"
               />
             </div>
             {/* Overlay with pin */}
