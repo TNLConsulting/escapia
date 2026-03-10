@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import domeExterior from "@/assets/dome-exterior.jpg";
+import domeExterior from "@/assets/render-night.jpg";
 
 const Hero = () => {
   const ref = useRef(null);

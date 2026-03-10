@@ -2,8 +2,8 @@ import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Users, Maximize, Bath, Wifi, Coffee, Wind } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import domeExterior from "@/assets/dome-exterior.jpg";
-import domeTwin from "@/assets/dome-twin.jpg";
+import domeExterior from "@/assets/render-autumn.jpg";
+import domeTwin from "@/assets/render-night.jpg";
 
 const amenityIcons = [
   { icon: Users, label: "2 Guests" },

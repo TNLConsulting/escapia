@@ -1,44 +1,56 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { 
-  UtensilsCrossed, 
   Sparkles, 
   TreePine, 
-  Car, 
   Flame,
-  Wine
+  Wifi,
+  Coffee,
+  BedDouble,
+  Utensils,
+  Droplets
 } from "lucide-react";
 
 const amenities = [
   {
-    icon: UtensilsCrossed,
-    title: "Gourmet Breakfast",
-    description: "Organic, locally-sourced breakfast delivered to your dome each morning.",
+    icon: Droplets,
+    title: "Private Jacuzzi",
+    description: "Your own outdoor jacuzzi, surrounded by nature. Perfect for evenings under the stars.",
   },
   {
-    icon: Sparkles,
-    title: "Wellness Rituals",
-    description: "Book private forest bathing sessions and in-dome massage treatments.",
-  },
-  {
-    icon: TreePine,
-    title: "Forest Trails",
-    description: "Private access to 5km of curated walking paths through ancient woodland.",
+    icon: BedDouble,
+    title: "King-Size Bed",
+    description: "Sink into premium bedding with panoramic forest views from your sleeping sanctuary.",
   },
   {
     icon: Flame,
-    title: "Private Fire Pit",
-    description: "Each dome features an outdoor fire pit for stargazing evenings.",
+    title: "Fire Pit & BBQ",
+    description: "Outdoor fire pit and BBQ for intimate evenings in the forest.",
   },
   {
-    icon: Wine,
-    title: "Curated Minibar",
-    description: "Belgian craft beers, local wines, and artisanal treats await.",
+    icon: TreePine,
+    title: "Private Forest Setting",
+    description: "Completely secluded in nature — no neighbours, no noise, just you and the forest.",
   },
   {
-    icon: Car,
-    title: "Concierge Service",
-    description: "Airport transfers, restaurant reservations, and local experiences arranged.",
+    icon: Sparkles,
+    title: "Stargazing Windows",
+    description: "Floor-to-ceiling windows and a glass roof for unforgettable starlit nights.",
+  },
+  {
+    icon: Coffee,
+    title: "Fully Equipped",
+    description: "Nespresso, premium toiletries, fluffy robes and everything you need for total comfort.",
+  },
+  {
+    icon: Wifi,
+    title: "High-Speed WiFi",
+    description: "Stay connected when you want — or simply switch off and embrace the silence.",
+  },
+  {
+    icon: Utensils,
+    title: "Fully Equipped Kitchen",
+    description: "Everything you need to cook your own meals in complete comfort.",
   },
 ];
 

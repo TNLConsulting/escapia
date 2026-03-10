@@ -35,7 +35,7 @@ const Navigation = () => {
         <div className="container mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="font-serif text-2xl md:text-3xl tracking-wider text-primary">
-            Escapia
+            Forêt Dôme
           </a>
 
           {/* Desktop Navigation */}

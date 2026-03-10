@@ -8,11 +8,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2 space-y-4">
             <a href="#" className="font-serif text-3xl tracking-wider text-primary">
-              Escapia
+              Forêt Dôme
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
-              Disconnect to reconnect. An exclusive twin-dome hideaway in nature, 
-              designed for two, nestled deep in the Belgian forest near Lille.
+              Disconnect to reconnect. An exclusive dome hideaway in nature, 
+              designed for two, nestled deep in the Belgian forest in Lille.
             </p>
             {/* Social Links */}
             <div className="flex gap-4 pt-4">
@@ -73,23 +73,16 @@ const Footer = () => {
             <h4 className="font-serif text-lg text-foreground mb-6">Contact</h4>
             <div className="space-y-4">
               <a
-                href="mailto:hello@escapia.be"
+                href="mailto:info@foretdome.be"
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                hello@escapia.be
-              </a>
-              <a
-                href="tel:+32123456789"
-                className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                +32 123 456 789
+                info@foretdome.be
               </a>
               <p className="text-sm text-muted-foreground">
-                Forêt de Phalempin
+                Bosuilweg 19
                 <br />
-                59133 Phalempin, Belgium
+                2275 Lille, Belgium
               </p>
             </div>
           </div>
@@ -98,7 +91,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="pt-8 border-t border-border/30 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Escapia. All rights reserved.
+            © {new Date().getFullYear()} Forêt Dôme. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a

@@ -19,21 +19,40 @@ const Booking = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Inquiry Received",
-      description: "We'll contact you within 24 hours to confirm your reservation.",
-    });
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      checkIn: "",
-      checkOut: "",
-      guests: "2",
-      message: "",
-    });
+    try {
+      const response = await fetch("https://formspree.io/f/PLACEHOLDER", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        toast({
+          title: "Inquiry Received",
+          description: "We'll contact you within 24 hours to confirm your reservation.",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          checkIn: "",
+          checkOut: "",
+          guests: "2",
+          message: "",
+        });
+      } else {
+        toast({
+          title: "Something went wrong",
+          description: "Please try again or email us directly at info@foretdome.be",
+        });
+      }
+    } catch {
+      toast({
+        title: "Connection error",
+        description: "Please check your internet connection and try again.",
+      });
+    }
   };
 
   const handleChange = (
@@ -62,8 +81,8 @@ const Booking = () => {
             Begin Your <span className="italic text-primary">Escape</span>
           </h2>
           <p className="text-lg text-muted-foreground font-light">
-            Our twin-dome sanctuary accommodates 2 guests. Due to our exclusive nature, 
-            we recommend booking at least 2 weeks in advance.
+            From <span className="text-primary font-medium">€250 per night</span> — exclusively for 2 guests. 
+            Due to our intimate nature, we recommend booking at least 2 weeks in advance.
           </p>
         </motion.div>
 
