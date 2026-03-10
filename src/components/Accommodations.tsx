@@ -139,7 +139,7 @@ const Accommodations = () => {
               style={{ y: imageY }}
               src={domeTwin}
               alt="Escapia - Interior view of connected domes"
-              className="w-full h-[115%] object-cover object-[72%]"
+              className="w-full h-[115%] object-cover object-[85%]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
           </div>

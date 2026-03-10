@@ -27,7 +27,7 @@ const Hero = () => {
         <img
           src={domeExterior}
           alt="Forêt Dôme - Luxury forest retreat"
-          className="w-full h-full object-cover object-[72%]"
+          className="w-full h-full object-cover object-[85%]"
         />
         {/* Gradient Overlay - stronger for text readability */}
         <div className="absolute inset-0 bg-gradient-hero" />
