@@ -99,7 +99,7 @@ const translations = {
     'booking.toast.title': 'Inquiry Received',
     'booking.toast.desc': 'We\'ll contact you within 24 hours to confirm your reservation.',
     'booking.error.title': 'Something went wrong',
-    'booking.error.desc': 'Please try again or email us directly at info@foretdome.be',
+    'booking.error.desc': 'Please try again or email us directly at info@escapia.be',
     'booking.conn.title': 'Connection error',
     'booking.conn.desc': 'Please check your internet connection and try again.',
 
@@ -226,7 +226,7 @@ const translations = {
     'booking.toast.title': 'Aanvraag Ontvangen',
     'booking.toast.desc': 'Wij nemen binnen 24 uur contact met u op om uw reservering te bevestigen.',
     'booking.error.title': 'Er is iets misgegaan',
-    'booking.error.desc': 'Probeer het opnieuw of e-mail ons rechtstreeks op info@foretdome.be',
+    'booking.error.desc': 'Probeer het opnieuw of e-mail ons rechtstreeks op info@escapia.be',
     'booking.conn.title': 'Verbindingsfout',
     'booking.conn.desc': 'Controleer uw internetverbinding en probeer het opnieuw.',
 

@@ -75,11 +75,11 @@ const Footer = () => {
             <h4 className="font-serif text-lg text-foreground mb-6">{t('footer.contact')}</h4>
             <div className="space-y-4">
               <a
-                href="mailto:info@foretdome.be"
+                href="mailto:info@escapia.be"
                 className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                info@foretdome.be
+                info@escapia.be
               </a>
               <p className="text-sm text-muted-foreground">
                 Bosuilweg 19
