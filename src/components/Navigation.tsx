@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const { lang, setLang, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,10 +18,10 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { href: "#experience", label: "Experience" },
-    { href: "#accommodations", label: "The Dome" },
-    { href: "#amenities", label: "Amenities" },
-    { href: "#location", label: "Location" },
+    { href: "#experience", label: t('nav.experience') },
+    { href: "#accommodations", label: t('nav.dome') },
+    { href: "#amenities", label: t('nav.amenities') },
+    { href: "#location", label: t('nav.location') },
   ];
 
   return (
@@ -51,10 +53,34 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* CTA Button + Language Toggle */}
+          <div className="hidden md:flex items-center gap-4">
+            {/* Language Toggle */}
+            <div className="flex items-center gap-1">
+              <button
+                onClick={() => setLang('en')}
+                className={`text-xs tracking-widest uppercase px-2 py-1 transition-colors duration-200 ${
+                  lang === 'en'
+                    ? 'text-primary font-semibold'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                EN
+              </button>
+              <span className="text-muted-foreground/40 text-xs">|</span>
+              <button
+                onClick={() => setLang('nl')}
+                className={`text-xs tracking-widest uppercase px-2 py-1 transition-colors duration-200 ${
+                  lang === 'nl'
+                    ? 'text-primary font-semibold'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                NL
+              </button>
+            </div>
             <Button variant="hero" size="lg" asChild>
-              <a href="#booking">Book Your Escape</a>
+              <a href="#booking">{t('nav.book')}</a>
             </Button>
           </div>
 
@@ -92,15 +118,44 @@ const Navigation = () => {
                   {link.label}
                 </motion.a>
               ))}
+              {/* Mobile Language Toggle */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 }}
+                className="flex items-center gap-2"
+              >
+                <button
+                  onClick={() => setLang('en')}
+                  className={`text-sm tracking-widest uppercase px-3 py-1 transition-colors duration-200 ${
+                    lang === 'en'
+                      ? 'text-primary font-semibold'
+                      : 'text-muted-foreground'
+                  }`}
+                >
+                  EN
+                </button>
+                <span className="text-muted-foreground/40">|</span>
+                <button
+                  onClick={() => setLang('nl')}
+                  className={`text-sm tracking-widest uppercase px-3 py-1 transition-colors duration-200 ${
+                    lang === 'nl'
+                      ? 'text-primary font-semibold'
+                      : 'text-muted-foreground'
+                  }`}
+                >
+                  NL
+                </button>
+              </motion.div>
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
-                className="pt-6"
+                transition={{ delay: 0.5 }}
+                className="pt-2"
               >
                 <Button variant="hero" size="xl" className="w-full" asChild>
                   <a href="#booking" onClick={() => setIsMobileOpen(false)}>
-                    Book Your Escape
+                    {t('nav.book')}
                   </a>
                 </Button>
               </motion.div>

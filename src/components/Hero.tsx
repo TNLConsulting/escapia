@@ -3,9 +3,11 @@ import { useRef } from "react";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import domeExterior from "@/assets/render-night.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
   const ref = useRef(null);
+  const { t } = useLanguage();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -45,7 +47,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-sm md:text-base tracking-[0.3em] uppercase text-primary mb-6"
         >
-          A hideaway in nature
+          {t('hero.tagline')}
         </motion.p>
 
         <motion.h1
@@ -54,9 +56,9 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="font-serif text-5xl md:text-7xl lg:text-8xl font-light text-foreground mb-6 leading-tight"
         >
-          Disconnect to
+          {t('hero.title1')}
           <br />
-          <span className="italic text-primary">Reconnect</span>
+          <span className="italic text-primary">{t('hero.title2')}</span>
         </motion.h1>
 
         <motion.p
@@ -65,8 +67,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 font-light"
         >
-          Escape to our exclusive twin-dome sanctuary near Lille, Belgium — 
-          an intimate retreat for two, nestled deep in the forest.
+          {t('hero.subtitle')}
         </motion.p>
 
         <motion.div
@@ -76,10 +77,10 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-4"
         >
           <Button variant="hero" size="xl" asChild>
-            <a href="#booking">Reserve Your Stay</a>
+            <a href="#booking">{t('hero.cta.reserve')}</a>
           </Button>
           <Button variant="elegant" size="xl" asChild>
-            <a href="#experience">Discover More</a>
+            <a href="#experience">{t('hero.cta.discover')}</a>
           </Button>
         </motion.div>
       </motion.div>
@@ -92,7 +93,7 @@ const Hero = () => {
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
         <span className="text-xs tracking-widest uppercase text-muted-foreground">
-          Scroll
+          {t('hero.scroll')}
         </span>
         <motion.div
           animate={{ y: [0, 8, 0] }}

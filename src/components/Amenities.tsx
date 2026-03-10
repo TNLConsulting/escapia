@@ -10,53 +10,28 @@ import {
   Utensils,
   Droplets
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import type { TranslationKey } from "@/lib/translations";
 
-const amenities = [
-  {
-    icon: Droplets,
-    title: "Private Jacuzzi",
-    description: "Your own outdoor jacuzzi, surrounded by nature. Perfect for evenings under the stars.",
-  },
-  {
-    icon: BedDouble,
-    title: "King-Size Bed",
-    description: "Sink into premium bedding with panoramic forest views from your sleeping sanctuary.",
-  },
-  {
-    icon: Flame,
-    title: "Fire Pit & BBQ",
-    description: "Outdoor fire pit and BBQ for intimate evenings in the forest.",
-  },
-  {
-    icon: TreePine,
-    title: "Private Forest Setting",
-    description: "Completely secluded in nature — no neighbours, no noise, just you and the forest.",
-  },
-  {
-    icon: Sparkles,
-    title: "Stargazing Windows",
-    description: "Floor-to-ceiling windows and a glass roof for unforgettable starlit nights.",
-  },
-  {
-    icon: Coffee,
-    title: "Fully Equipped",
-    description: "Nespresso, premium toiletries, fluffy robes and everything you need for total comfort.",
-  },
-  {
-    icon: Wifi,
-    title: "High-Speed WiFi",
-    description: "Stay connected when you want — or simply switch off and embrace the silence.",
-  },
-  {
-    icon: Utensils,
-    title: "Fully Equipped Kitchen",
-    description: "Everything you need to cook your own meals in complete comfort.",
-  },
+const amenityKeys: Array<{
+  icon: React.ElementType;
+  titleKey: TranslationKey;
+  descKey: TranslationKey;
+}> = [
+  { icon: Droplets, titleKey: 'amenities.jacuzzi.title',    descKey: 'amenities.jacuzzi.desc' },
+  { icon: BedDouble, titleKey: 'amenities.bed.title',       descKey: 'amenities.bed.desc' },
+  { icon: Flame,    titleKey: 'amenities.fire.title',       descKey: 'amenities.fire.desc' },
+  { icon: TreePine, titleKey: 'amenities.forest.title',     descKey: 'amenities.forest.desc' },
+  { icon: Sparkles, titleKey: 'amenities.stargazing.title', descKey: 'amenities.stargazing.desc' },
+  { icon: Coffee,   titleKey: 'amenities.equipped.title',   descKey: 'amenities.equipped.desc' },
+  { icon: Wifi,     titleKey: 'amenities.wifi.title',       descKey: 'amenities.wifi.desc' },
+  { icon: Utensils, titleKey: 'amenities.kitchen.title',    descKey: 'amenities.kitchen.desc' },
 ];
 
 const Amenities = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   return (
     <section id="amenities" className="py-32 bg-card relative overflow-hidden">
@@ -74,22 +49,21 @@ const Amenities = () => {
           className="text-center max-w-3xl mx-auto mb-20"
         >
           <p className="text-sm tracking-[0.3em] uppercase text-primary mb-4">
-            Services & Amenities
+            {t('amenities.label')}
           </p>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
-            Every Detail, <span className="italic text-primary">Considered</span>
+            {t('amenities.title')} <span className="italic text-primary">{t('amenities.title.italic')}</span>
           </h2>
           <p className="text-lg text-muted-foreground font-light">
-            From gourmet meals to private wellness experiences, every aspect of your 
-            stay has been thoughtfully designed.
+            {t('amenities.subtitle')}
           </p>
         </motion.div>
 
         {/* Amenities Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {amenities.map((amenity, index) => (
+          {amenityKeys.map((amenity, index) => (
             <motion.div
-              key={amenity.title}
+              key={amenity.titleKey}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -100,10 +74,10 @@ const Amenities = () => {
               </div>
               <div>
                 <h3 className="font-serif text-lg text-foreground mb-2">
-                  {amenity.title}
+                  {t(amenity.titleKey)}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  {amenity.description}
+                  {t(amenity.descKey)}
                 </p>
               </div>
             </motion.div>

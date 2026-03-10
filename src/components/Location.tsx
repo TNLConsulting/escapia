@@ -1,10 +1,12 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { MapPin, Train, Plane, Clock } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Location = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   return (
     <section id="location" className="py-32 bg-background relative">
@@ -19,15 +21,13 @@ const Location = () => {
           >
             <div>
               <p className="text-sm tracking-[0.3em] uppercase text-primary mb-4">
-                Location
+                {t('location.label')}
               </p>
               <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-6">
-                Hidden in Plain <span className="italic text-primary">Sight</span>
+                {t('location.title')} <span className="italic text-primary">{t('location.title.italic')}</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Escapia is nestled within the peaceful surroundings of Lille in Vlaams Gewest, 
-                offering the perfect balance of seclusion and accessibility. Just minutes from 
-                the city, yet worlds away from the everyday.
+                {t('location.desc')}
               </p>
             </div>
 
@@ -38,7 +38,7 @@ const Location = () => {
                   <MapPin className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-lg text-foreground mb-1">Address</h4>
+                  <h4 className="font-serif text-lg text-foreground mb-1">{t('location.address')}</h4>
                   <p className="text-sm text-muted-foreground">
                     Bosuilweg 19, 2275 Lille
                     <br />
@@ -52,11 +52,9 @@ const Location = () => {
                   <Train className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-lg text-foreground mb-1">By Train</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Antwerpen-Centraal station: 30 minutes by car
-                    <br />
-                    Complimentary pickup available
+                  <h4 className="font-serif text-lg text-foreground mb-1">{t('location.train')}</h4>
+                  <p className="text-sm text-muted-foreground" style={{ whiteSpace: 'pre-line' }}>
+                    {t('location.train.desc')}
                   </p>
                 </div>
               </div>
@@ -66,11 +64,9 @@ const Location = () => {
                   <Plane className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-lg text-foreground mb-1">By Air</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Antwerp Airport (ANR): 25 minutes
-                    <br />
-                    Brussels Airport (BRU): 45 minutes
+                  <h4 className="font-serif text-lg text-foreground mb-1">{t('location.air')}</h4>
+                  <p className="text-sm text-muted-foreground" style={{ whiteSpace: 'pre-line' }}>
+                    {t('location.air.desc')}
                   </p>
                 </div>
               </div>
@@ -80,11 +76,9 @@ const Location = () => {
                   <Clock className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-lg text-foreground mb-1">Check-in Times</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Check-in: 15:00 | Check-out: 11:00
-                    <br />
-                    Early/late options available on request
+                  <h4 className="font-serif text-lg text-foreground mb-1">{t('location.checkin')}</h4>
+                  <p className="text-sm text-muted-foreground" style={{ whiteSpace: 'pre-line' }}>
+                    {t('location.checkin.desc')}
                   </p>
                 </div>
               </div>

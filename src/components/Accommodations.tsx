@@ -4,20 +4,23 @@ import { Users, Maximize, Bath, Wifi, Coffee, Wind } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import domeExterior from "@/assets/render-autumn.jpg";
 import domeTwin from "@/assets/render-night.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
+import type { TranslationKey } from "@/lib/translations";
 
-const amenityIcons = [
-  { icon: Users, label: "2 Guests" },
-  { icon: Maximize, label: "Twin Domes" },
-  { icon: Bath, label: "Rain Shower" },
-  { icon: Wifi, label: "High-Speed WiFi" },
-  { icon: Coffee, label: "Nespresso" },
-  { icon: Wind, label: "Climate Control" },
+const amenityIconKeys: Array<{ icon: React.ElementType; labelKey: TranslationKey }> = [
+  { icon: Users,    labelKey: 'accom.amenity.guests' },
+  { icon: Maximize, labelKey: 'accom.amenity.twin' },
+  { icon: Bath,     labelKey: 'accom.amenity.shower' },
+  { icon: Wifi,     labelKey: 'accom.amenity.wifi' },
+  { icon: Coffee,   labelKey: 'accom.amenity.nespresso' },
+  { icon: Wind,     labelKey: 'accom.amenity.climate' },
 ];
 
 const Accommodations = () => {
   const ref = useRef(null);
   const containerRef = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -41,14 +44,13 @@ const Accommodations = () => {
           className="text-center max-w-3xl mx-auto mb-20"
         >
           <p className="text-sm tracking-[0.3em] uppercase text-primary mb-4">
-            Your Sanctuary
+            {t('accom.label')}
           </p>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
-            The <span className="italic text-primary">Dome</span>
+            {t('accom.title')} <span className="italic text-primary">{t('accom.title.italic')}</span>
           </h2>
           <p className="text-lg text-muted-foreground font-light">
-            Two connected domes create one intimate sanctuary — a living space and sleeping 
-            retreat linked by a wooden corridor, designed exclusively for two.
+            {t('accom.subtitle')}
           </p>
         </motion.div>
 
@@ -73,27 +75,24 @@ const Accommodations = () => {
           {/* Content */}
           <div className="space-y-6">
             <h3 className="font-serif text-3xl md:text-4xl text-foreground">
-              Two Domes, One Experience
+              {t('accom.h3.1')}
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Wake up in a cocoon of glass and moss. Our unique twin-dome structure 
-              offers the perfect balance of openness and intimacy — a spacious living 
-              dome flows into a cozy sleeping sanctuary, all wrapped in the embrace 
-              of the ancient forest.
+              {t('accom.body.1')}
             </p>
 
             {/* Amenities */}
             <div className="grid grid-cols-3 gap-4 py-6 border-y border-border/50">
-              {amenityIcons.map((item) => (
-                <div key={item.label} className="flex flex-col items-center gap-2 text-center">
+              {amenityIconKeys.map((item) => (
+                <div key={item.labelKey} className="flex flex-col items-center gap-2 text-center">
                   <item.icon className="w-5 h-5 text-primary" />
-                  <span className="text-xs text-muted-foreground">{item.label}</span>
+                  <span className="text-xs text-muted-foreground">{t(item.labelKey)}</span>
                 </div>
               ))}
             </div>
 
             <Button variant="glow" size="lg" asChild>
-              <a href="#booking">Check Availability</a>
+              <a href="#booking">{t('accom.check')}</a>
             </Button>
           </div>
         </motion.div>
@@ -108,32 +107,29 @@ const Accommodations = () => {
           {/* Content - Reversed order on large screens */}
           <div className="space-y-6 lg:order-2">
             <h3 className="font-serif text-3xl md:text-4xl text-foreground">
-              Where Forest Meets Comfort
+              {t('accom.h3.2')}
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Every detail has been crafted for your escape. A king-size bed faces 
-              panoramic windows that frame the forest canopy. The rain shower brings 
-              nature inside, while the living dome offers a space to unwind, sip 
-              morning coffee, and simply breathe.
+              {t('accom.body.2')}
             </p>
 
             <div className="space-y-4 py-6 border-y border-border/50">
               <div className="flex items-center gap-4">
                 <span className="w-2 h-2 rounded-full bg-primary" />
-                <span className="text-muted-foreground text-sm">Private wooden terrace overlooking the forest</span>
+                <span className="text-muted-foreground text-sm">{t('accom.bullet.1')}</span>
               </div>
               <div className="flex items-center gap-4">
                 <span className="w-2 h-2 rounded-full bg-primary" />
-                <span className="text-muted-foreground text-sm">Floor-to-ceiling windows with forest views</span>
+                <span className="text-muted-foreground text-sm">{t('accom.bullet.2')}</span>
               </div>
               <div className="flex items-center gap-4">
                 <span className="w-2 h-2 rounded-full bg-primary" />
-                <span className="text-muted-foreground text-sm">Living moss roof that breathes with nature</span>
+                <span className="text-muted-foreground text-sm">{t('accom.bullet.3')}</span>
               </div>
             </div>
 
             <Button variant="glow" size="lg" asChild>
-              <a href="#booking">Reserve Your Escape</a>
+              <a href="#booking">{t('accom.reserve')}</a>
             </Button>
           </div>
 

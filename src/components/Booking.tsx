@@ -3,11 +3,13 @@ import { useRef, useState } from "react";
 import { Calendar, Users, Mail, Phone, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Booking = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { toast } = useToast();
+  const { t } = useLanguage();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -29,8 +31,8 @@ const Booking = () => {
       });
       if (response.ok) {
         toast({
-          title: "Inquiry Received",
-          description: "We'll contact you within 24 hours to confirm your reservation.",
+          title: t('booking.toast.title'),
+          description: t('booking.toast.desc'),
         });
         setFormData({
           name: "",
@@ -43,14 +45,14 @@ const Booking = () => {
         });
       } else {
         toast({
-          title: "Something went wrong",
-          description: "Please try again or email us directly at info@foretdome.be",
+          title: t('booking.error.title'),
+          description: t('booking.error.desc'),
         });
       }
     } catch {
       toast({
-        title: "Connection error",
-        description: "Please check your internet connection and try again.",
+        title: t('booking.conn.title'),
+        description: t('booking.conn.desc'),
       });
     }
   };
@@ -75,14 +77,15 @@ const Booking = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <p className="text-sm tracking-[0.3em] uppercase text-primary mb-4">
-            Reservations
+            {t('booking.label')}
           </p>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
-            Begin Your <span className="italic text-primary">Escape</span>
+            {t('booking.title')} <span className="italic text-primary">{t('booking.title.italic')}</span>
           </h2>
           <p className="text-lg text-muted-foreground font-light">
-            From <span className="text-primary font-medium">€250 per night</span> — exclusively for 2 guests. 
-            Due to our intimate nature, we recommend booking at least 2 weeks in advance.
+            {t('booking.price.prefix')}{' '}
+            <span className="text-primary font-medium">{t('booking.price.amount')}</span>{' '}
+            {t('booking.price.suffix')}
           </p>
         </motion.div>
 
@@ -101,7 +104,7 @@ const Booking = () => {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-sm tracking-wider uppercase text-muted-foreground">
-                  Full Name
+                  {t('booking.label.name')}
                 </label>
                 <input
                   type="text"
@@ -110,12 +113,12 @@ const Booking = () => {
                   onChange={handleChange}
                   required
                   className="w-full bg-background/50 border border-border/50 rounded px-4 py-3 text-foreground placeholder:text-muted-foreground/50 focus:border-primary/50 focus:outline-none transition-colors"
-                  placeholder="Your name"
+                  placeholder={t('booking.placeholder.name')}
                 />
               </div>
               <div className="space-y-2">
                 <label className="text-sm tracking-wider uppercase text-muted-foreground flex items-center gap-2">
-                  <Mail className="w-4 h-4" /> Email
+                  <Mail className="w-4 h-4" /> {t('booking.label.email')}
                 </label>
                 <input
                   type="email"
@@ -132,7 +135,7 @@ const Booking = () => {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-sm tracking-wider uppercase text-muted-foreground flex items-center gap-2">
-                  <Phone className="w-4 h-4" /> Phone
+                  <Phone className="w-4 h-4" /> {t('booking.label.phone')}
                 </label>
                 <input
                   type="tel"
@@ -145,7 +148,7 @@ const Booking = () => {
               </div>
               <div className="space-y-2">
                 <label className="text-sm tracking-wider uppercase text-muted-foreground flex items-center gap-2">
-                  <Users className="w-4 h-4" /> Guests
+                  <Users className="w-4 h-4" /> {t('booking.label.guests')}
                 </label>
                 <select
                   name="guests"
@@ -153,8 +156,8 @@ const Booking = () => {
                   onChange={handleChange}
                   className="w-full bg-background/50 border border-border/50 rounded px-4 py-3 text-foreground focus:border-primary/50 focus:outline-none transition-colors"
                 >
-                  <option value="1">1 Guest</option>
-                  <option value="2">2 Guests</option>
+                  <option value="1">{t('booking.guest.1')}</option>
+                  <option value="2">{t('booking.guest.2')}</option>
                 </select>
               </div>
             </div>
@@ -163,7 +166,7 @@ const Booking = () => {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-sm tracking-wider uppercase text-muted-foreground flex items-center gap-2">
-                  <Calendar className="w-4 h-4" /> Check-in
+                  <Calendar className="w-4 h-4" /> {t('booking.label.checkin')}
                 </label>
                 <input
                   type="date"
@@ -176,7 +179,7 @@ const Booking = () => {
               </div>
               <div className="space-y-2">
                 <label className="text-sm tracking-wider uppercase text-muted-foreground flex items-center gap-2">
-                  <Calendar className="w-4 h-4" /> Check-out
+                  <Calendar className="w-4 h-4" /> {t('booking.label.checkout')}
                 </label>
                 <input
                   type="date"
@@ -192,7 +195,7 @@ const Booking = () => {
             {/* Message */}
             <div className="space-y-2">
               <label className="text-sm tracking-wider uppercase text-muted-foreground flex items-center gap-2">
-                <MessageSquare className="w-4 h-4" /> Special Requests
+                <MessageSquare className="w-4 h-4" /> {t('booking.label.requests')}
               </label>
               <textarea
                 name="message"
@@ -200,17 +203,16 @@ const Booking = () => {
                 onChange={handleChange}
                 rows={4}
                 className="w-full bg-background/50 border border-border/50 rounded px-4 py-3 text-foreground placeholder:text-muted-foreground/50 focus:border-primary/50 focus:outline-none transition-colors resize-none"
-                placeholder="Anniversary celebration, dietary requirements, early check-in..."
+                placeholder={t('booking.placeholder.requests')}
               />
             </div>
 
             <Button type="submit" variant="hero" size="xl" className="w-full">
-              Request Reservation
+              {t('booking.submit')}
             </Button>
 
             <p className="text-center text-xs text-muted-foreground">
-              By submitting this form, you agree to our privacy policy. 
-              A 50% deposit is required to confirm your booking.
+              {t('booking.fine')}
             </p>
           </form>
         </motion.div>

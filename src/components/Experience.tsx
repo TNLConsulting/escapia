@@ -1,37 +1,24 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Leaf, Moon, Sparkles, TreePine } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import type { TranslationKey } from "@/lib/translations";
 
-const features = [
-  {
-    icon: TreePine,
-    title: "Forest Immersion",
-    description:
-      "Nestled deep within an ancient forest, our domes offer complete immersion in nature without sacrificing comfort.",
-  },
-  {
-    icon: Leaf,
-    title: "Living Architecture",
-    description:
-      "Each dome is crowned with a living moss roof, blending seamlessly into the forest canopy around it.",
-  },
-  {
-    icon: Moon,
-    title: "Starlit Nights",
-    description:
-      "Floor-to-ceiling windows frame the forest by day and reveal starry skies by night.",
-  },
-  {
-    icon: Sparkles,
-    title: "Boutique Luxury",
-    description:
-      "Every detail has been carefully curated to create an exclusive sanctuary for discerning travelers.",
-  },
+const featureKeys: Array<{
+  icon: React.ElementType;
+  titleKey: TranslationKey;
+  descKey: TranslationKey;
+}> = [
+  { icon: TreePine, titleKey: 'experience.f1.title', descKey: 'experience.f1.desc' },
+  { icon: Leaf,     titleKey: 'experience.f2.title', descKey: 'experience.f2.desc' },
+  { icon: Moon,     titleKey: 'experience.f3.title', descKey: 'experience.f3.desc' },
+  { icon: Sparkles, titleKey: 'experience.f4.title', descKey: 'experience.f4.desc' },
 ];
 
 const Experience = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   return (
     <section id="experience" className="py-32 bg-gradient-forest relative overflow-hidden">
@@ -48,24 +35,23 @@ const Experience = () => {
           className="text-center max-w-3xl mx-auto mb-20"
         >
           <p className="text-sm tracking-[0.3em] uppercase text-primary mb-4">
-            The Experience
+            {t('experience.label')}
           </p>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 leading-tight">
-            Where Wilderness Meets
+            {t('experience.title1')}
             <br />
-            <span className="italic text-primary">Refined Living</span>
+            <span className="italic text-primary">{t('experience.title2')}</span>
           </h2>
           <p className="text-lg text-muted-foreground font-light leading-relaxed">
-            Forêt Dôme is more than accommodation—it's a return to nature, 
-            reimagined for those who seek both adventure and elegance.
+            {t('experience.desc')}
           </p>
         </motion.div>
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
+          {featureKeys.map((feature, index) => (
             <motion.div
-              key={feature.title}
+              key={feature.titleKey}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.15 }}
@@ -75,10 +61,10 @@ const Experience = () => {
                 <feature.icon className="w-7 h-7 text-primary" />
               </div>
               <h3 className="font-serif text-xl text-foreground mb-3">
-                {feature.title}
+                {t(feature.titleKey)}
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                {feature.description}
+                {t(feature.descKey)}
               </p>
             </motion.div>
           ))}

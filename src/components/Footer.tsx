@@ -1,6 +1,9 @@
-import { Instagram, Facebook, Mail, Phone } from "lucide-react";
+import { Instagram, Facebook, Mail } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="py-20 bg-card border-t border-border/30">
       <div className="container mx-auto px-6">
@@ -11,8 +14,7 @@ const Footer = () => {
               Forêt Dôme
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
-              Disconnect to reconnect. An exclusive dome hideaway in nature, 
-              designed for two, nestled deep in the Belgian forest in Lille.
+              {t('footer.tagline')}
             </p>
             {/* Social Links */}
             <div className="flex gap-4 pt-4">
@@ -33,44 +35,44 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-serif text-lg text-foreground mb-6">Explore</h4>
+            <h4 className="font-serif text-lg text-foreground mb-6">{t('footer.explore')}</h4>
             <nav className="space-y-3">
               <a
                 href="#experience"
                 className="block text-sm text-muted-foreground hover:text-primary transition-colors"
               >
-                The Experience
+                {t('footer.link.experience')}
               </a>
               <a
                 href="#accommodations"
                 className="block text-sm text-muted-foreground hover:text-primary transition-colors"
               >
-                The Dome
+                {t('footer.link.dome')}
               </a>
               <a
                 href="#amenities"
                 className="block text-sm text-muted-foreground hover:text-primary transition-colors"
               >
-                Amenities
+                {t('footer.link.amenities')}
               </a>
               <a
                 href="#location"
                 className="block text-sm text-muted-foreground hover:text-primary transition-colors"
               >
-                Location
+                {t('footer.link.location')}
               </a>
               <a
                 href="#booking"
                 className="block text-sm text-muted-foreground hover:text-primary transition-colors"
               >
-                Reservations
+                {t('footer.link.reservations')}
               </a>
             </nav>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-serif text-lg text-foreground mb-6">Contact</h4>
+            <h4 className="font-serif text-lg text-foreground mb-6">{t('footer.contact')}</h4>
             <div className="space-y-4">
               <a
                 href="mailto:info@foretdome.be"
@@ -91,20 +93,20 @@ const Footer = () => {
         {/* Bottom */}
         <div className="pt-8 border-t border-border/30 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Forêt Dôme. All rights reserved.
+            © {new Date().getFullYear()} Forêt Dôme. {t('footer.rights')}
           </p>
           <div className="flex gap-6">
             <a
               href="#"
               className="text-xs text-muted-foreground hover:text-primary transition-colors"
             >
-              Privacy Policy
+              {t('footer.privacy')}
             </a>
             <a
               href="#"
               className="text-xs text-muted-foreground hover:text-primary transition-colors"
             >
-              Terms of Service
+              {t('footer.terms')}
             </a>
           </div>
         </div>
