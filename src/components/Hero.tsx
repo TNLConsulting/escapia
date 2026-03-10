@@ -27,10 +27,11 @@ const Hero = () => {
         <img
           src={domeExterior}
           alt="Forêt Dôme - Luxury forest retreat"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
         />
-        {/* Gradient Overlay */}
+        {/* Gradient Overlay - stronger for text readability */}
         <div className="absolute inset-0 bg-gradient-hero" />
+        <div className="absolute inset-0 bg-black/40" />
       </motion.div>
 
       {/* Ambient Glow Effect */}
