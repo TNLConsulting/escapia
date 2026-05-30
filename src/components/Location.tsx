@@ -13,7 +13,7 @@ export function Location() {
       <div className="container-narrow">
         <h2
           className="text-4xl md:text-5xl font-serif font-light text-center mb-16"
-          style={{ color: '#e5b87a' }}
+          style={{ color: '#f0c885' }}
         >
           {t.location.title}
         </h2>
@@ -31,9 +31,9 @@ export function Location() {
             }}
           >
               <div className="flex items-start gap-4 mb-6">
-                <MapPin className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#e5b87a' }} />
+                <MapPin className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#f0c885' }} />
                 <div>
-                  <h3 className="text-lg font-serif font-light mb-2" style={{ color: '#d0d0d0' }}>
+                  <h3 className="text-lg font-serif font-light mb-2" style={{ color: '#b8b8b8' }}>
                     Address
                   </h3>
                   <p style={{ color: '#a8a8a8' }}>{t.location.address}</p>
@@ -44,7 +44,7 @@ export function Location() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-light hover:opacity-80 transition-opacity"
-                style={{ color: '#e5b87a' }}
+                style={{ color: '#f0c885' }}
               >
                 Open in Google Maps →
               </a>
@@ -52,7 +52,7 @@ export function Location() {
 
             {/* Transportation */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-serif font-light" style={{ color: '#d0d0d0' }}>
+              <h3 className="text-2xl font-serif font-light" style={{ color: '#b8b8b8' }}>
                 {t.location.transportation.title}
               </h3>
 
@@ -63,7 +63,7 @@ export function Location() {
                   border: '1px solid rgba(212, 165, 116, 0.2)',
                 }}
               >
-                <Train className="w-6 h-6 flex-shrink-0 mt-0.5" style={{ color: '#e5b87a' }} />
+                <Train className="w-6 h-6 flex-shrink-0 mt-0.5" style={{ color: '#f0c885' }} />
                 <p style={{ color: '#a8a8a8' }}>{t.location.transportation.train}</p>
               </div>
 
@@ -74,7 +74,7 @@ export function Location() {
                   border: '1px solid rgba(212, 165, 116, 0.2)',
                 }}
               >
-                <Plane className="w-6 h-6 flex-shrink-0 mt-0.5" style={{ color: '#e5b87a' }} />
+                <Plane className="w-6 h-6 flex-shrink-0 mt-0.5" style={{ color: '#f0c885' }} />
                 <p style={{ color: '#a8a8a8' }}>{t.location.transportation.air}</p>
               </div>
             </div>
@@ -91,30 +91,30 @@ export function Location() {
                 border: '1px solid rgba(212, 165, 116, 0.2)',
               }}
             >
-              <h3 className="text-2xl font-serif font-light mb-6" style={{ color: '#d0d0d0' }}>
+              <h3 className="text-2xl font-serif font-light mb-6" style={{ color: '#b8b8b8' }}>
                 {t.location.checkInTimes.title}
               </h3>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <Clock className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#e5b87a' }} />
+                  <Clock className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#f0c885' }} />
                   <div>
                     <p className="text-sm font-light" style={{ color: '#a8a8a8' }}>
                       Check-in
                     </p>
-                    <p className="font-light" style={{ color: '#d0d0d0' }}>
+                    <p className="font-light" style={{ color: '#b8b8b8' }}>
                       {t.location.checkInTimes.checkIn}
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Clock className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#e5b87a' }} />
+                  <Clock className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#f0c885' }} />
                   <div>
                     <p className="text-sm font-light" style={{ color: '#a8a8a8' }}>
                       Check-out
                     </p>
-                    <p className="font-light" style={{ color: '#d0d0d0' }}>
+                    <p className="font-light" style={{ color: '#b8b8b8' }}>
                       {t.location.checkInTimes.checkOut}
                     </p>
                   </div>

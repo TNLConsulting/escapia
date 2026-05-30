@@ -15,9 +15,9 @@ export function Accommodations() {
   return (
     <section id="accommodations" className="w-full py-20" style={{ background: "linear-gradient(to bottom, #0a1a0f, #000)" }}>
       <div className="max-w-7xl mx-auto px-6">
-        <p className="text-xs tracking-widest uppercase text-center mb-2" style={{ color: "#e5b87a" }}>Your Sanctuary</p>
-        <h2 className="text-5xl font-serif font-light text-center mb-6" style={{ color: "#d0d0d0" }}>
-          The <span style={{ color: "#e5b87a" }}>Dome</span>
+        <p className="text-sm tracking-widest uppercase text-center mb-2" style={{ color: "#f0c885" }}>Your Sanctuary</p>
+        <h2 className="text-5xl font-serif font-light text-center mb-6" style={{ color: "#b8b8b8" }}>
+          The <span style={{ color: "#f0c885" }}>Dome</span>
         </h2>
         <p className="text-center max-w-3xl mx-auto mb-12" style={{ color: "#a8a8a8" }}>
           Two connected domes create one intimate sanctuary — a living space and sleeping retreat<br />
@@ -32,8 +32,8 @@ export function Accommodations() {
 
           {/* Right - Content */}
           <div>
-            <h3 className="text-4xl font-serif font-light mb-6 tracking-wide" style={{ color: "#d0d0d0", letterSpacing: "0.05em" }}>
-              Two Domes,<br />One Experience
+            <h3 className="text-4xl font-serif font-light mb-6 tracking-wide" style={{ color: "#b8b8b8", letterSpacing: "0.05em" }}>
+              Two Domes, One Experience
             </h3>
             <p className="text-base mb-8 font-light" style={{ color: "#a8a8a8", lineHeight: "1.9", letterSpacing: "0.01em" }}>
               Wake up in a cocoon of glass and moss. Our unique twin-dome structure offers the perfect balance of openness and intimacy — a spacious living dome flows into a cozy sleeping sanctuary, all wrapped in the embrace of the ancient forest.
@@ -46,7 +46,7 @@ export function Accommodations() {
                 return (
                   <div key={i} className="text-center">
                     <div className="mb-3 flex justify-center">
-                      <Icon size={28} style={{ color: "#e5b87a" }} />
+                      <Icon size={28} style={{ color: "#f0c885" }} />
                     </div>
                     <p className="text-xs" style={{ color: "#a8a8a8" }}>{spec.label}</p>
                   </div>
@@ -57,8 +57,8 @@ export function Accommodations() {
             <button
               className="px-8 py-3 rounded-lg font-medium border-2 transition-all"
               style={{
-                borderColor: "#e5b87a",
-                color: "#e5b87a",
+                borderColor: "#f0c885",
+                color: "#f0c885",
               }}
             >
               Check Availability
@@ -75,8 +75,8 @@ export function Accommodations() {
 
           {/* Right - Content */}
           <div className="order-1 md:order-2">
-            <h3 className="text-4xl font-serif font-light mb-6 tracking-wide" style={{ color: "#d0d0d0", letterSpacing: "0.05em" }}>
-              Where Forest<br />Meets Comfort
+            <h3 className="text-4xl font-serif font-light mb-6 tracking-wide" style={{ color: "#b8b8b8", letterSpacing: "0.05em" }}>
+              Where Forest Meets Comfort
             </h3>
             <p className="text-base mb-8 font-light" style={{ color: "#a8a8a8", lineHeight: "1.9", letterSpacing: "0.01em" }}>
               Every detail has been crafted for your escape. A king-size bed faces panoramic windows that frame the forest canopy. The rain shower brings nature inside, while the living dome offers a space to unwind, sip morning coffee, and simply breathe.
@@ -90,7 +90,7 @@ export function Accommodations() {
                 "Living moss roof that breathes with nature"
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-4 text-sm" style={{ color: "#a8a8a8" }}>
-                  <span style={{ color: "#e5b87a", marginTop: "4px" }}>●</span>
+                  <span style={{ color: "#f0c885", marginTop: "4px" }}>●</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -99,7 +99,7 @@ export function Accommodations() {
             <button
               className="px-8 py-3 rounded-lg font-medium transition-all"
               style={{
-                backgroundColor: "#e5b87a",
+                backgroundColor: "#f0c885",
                 color: "#1a1a1a",
               }}
             >

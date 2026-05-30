@@ -20,7 +20,7 @@ export function Navigation() {
       <div className="container-narrow flex justify-between items-center h-20">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <h1 className="text-2xl font-serif font-light" style={{ color: '#e5b87a' }}>
+          <h1 className="text-2xl font-serif font-light" style={{ color: '#f0c885' }}>
             Forêt Dôme
           </h1>
         </div>
@@ -30,28 +30,28 @@ export function Navigation() {
           <a
             href="#experience"
             className="transition-colors duration-300 hover:opacity-70"
-            style={{ color: '#d0d0d0' }}
+            style={{ color: '#b8b8b8' }}
           >
             {t.nav.experience}
           </a>
           <a
             href="#accommodations"
             className="transition-colors duration-300 hover:opacity-70"
-            style={{ color: '#d0d0d0' }}
+            style={{ color: '#b8b8b8' }}
           >
             {t.nav.dome}
           </a>
           <a
             href="#amenities"
             className="transition-colors duration-300 hover:opacity-70"
-            style={{ color: '#d0d0d0' }}
+            style={{ color: '#b8b8b8' }}
           >
             {t.nav.amenities}
           </a>
           <a
             href="#location"
             className="transition-colors duration-300 hover:opacity-70"
-            style={{ color: '#d0d0d0' }}
+            style={{ color: '#b8b8b8' }}
           >
             {t.nav.location}
           </a>
@@ -70,8 +70,8 @@ export function Navigation() {
               onClick={() => setLanguage("en")}
               className="px-3 py-1 text-sm font-medium transition-colors duration-300"
               style={{
-                backgroundColor: language === "en" ? '#e5b87a' : 'transparent',
-                color: language === "en" ? '#1a1a1a' : '#d0d0d0',
+                backgroundColor: language === "en" ? '#f0c885' : 'transparent',
+                color: language === "en" ? '#1a1a1a' : '#b8b8b8',
               }}
             >
               EN
@@ -80,8 +80,8 @@ export function Navigation() {
               onClick={() => setLanguage("nl")}
               className="px-3 py-1 text-sm font-medium transition-colors duration-300"
               style={{
-                backgroundColor: language === "nl" ? '#e5b87a' : 'transparent',
-                color: language === "nl" ? '#1a1a1a' : '#d0d0d0',
+                backgroundColor: language === "nl" ? '#f0c885' : 'transparent',
+                color: language === "nl" ? '#1a1a1a' : '#b8b8b8',
               }}
             >
               NL
@@ -96,7 +96,7 @@ export function Navigation() {
           {/* Mobile Menu Toggle */}
           <button
             className="md:hidden transition-colors"
-            style={{ color: '#d0d0d0' }}
+            style={{ color: '#b8b8b8' }}
             onClick={() => setIsOpen(!isOpen)}
           >
             <svg
@@ -128,7 +128,7 @@ export function Navigation() {
           <a
             href="#experience"
             className="block transition-colors"
-            style={{ color: '#d0d0d0' }}
+            style={{ color: '#b8b8b8' }}
             onClick={() => setIsOpen(false)}
           >
             {t.nav.experience}
@@ -136,7 +136,7 @@ export function Navigation() {
           <a
             href="#accommodations"
             className="block transition-colors"
-            style={{ color: '#d0d0d0' }}
+            style={{ color: '#b8b8b8' }}
             onClick={() => setIsOpen(false)}
           >
             {t.nav.dome}
@@ -144,7 +144,7 @@ export function Navigation() {
           <a
             href="#amenities"
             className="block transition-colors"
-            style={{ color: '#d0d0d0' }}
+            style={{ color: '#b8b8b8' }}
             onClick={() => setIsOpen(false)}
           >
             {t.nav.amenities}
@@ -152,7 +152,7 @@ export function Navigation() {
           <a
             href="#location"
             className="block transition-colors"
-            style={{ color: '#d0d0d0' }}
+            style={{ color: '#b8b8b8' }}
             onClick={() => setIsOpen(false)}
           >
             {t.nav.location}
