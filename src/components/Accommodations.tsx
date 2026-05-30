@@ -26,16 +26,16 @@ export function Accommodations() {
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Left - Photo */}
-          <div className="rounded-lg overflow-hidden">
-            <img src="/dome-exterior.jpg" alt="Twin dome exterior" className="w-full h-auto rounded-lg" />
+          <div className="rounded-lg overflow-hidden h-96">
+            <img src="/dome-exterior.jpg" alt="Twin dome exterior" className="w-full h-full object-cover object-center rounded-lg" />
           </div>
 
           {/* Right - Content */}
           <div>
-            <h3 className="text-3xl font-serif font-light mb-6" style={{ color: "#e8e8e8" }}>
-              Two Domes, One Experience
+            <h3 className="text-4xl font-serif font-light mb-6 tracking-wide" style={{ color: "#e8e8e8", letterSpacing: "0.05em" }}>
+              Two Domes,<br />One Experience
             </h3>
-            <p className="text-sm mb-8" style={{ color: "#a8a8a8", lineHeight: "1.8" }}>
+            <p className="text-base mb-8 font-light" style={{ color: "#a8a8a8", lineHeight: "1.9", letterSpacing: "0.01em" }}>
               Wake up in a cocoon of glass and moss. Our unique twin-dome structure offers the perfect balance of openness and intimacy — a spacious living dome flows into a cozy sleeping sanctuary, all wrapped in the embrace of the ancient forest.
             </p>
 
