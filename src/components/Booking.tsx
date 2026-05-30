@@ -59,7 +59,7 @@ export function Booking() {
   };
 
   return (
-    <section id="booking" className="section-padding" style={{ backgroundColor: '#1a1a1a' }}>
+    <section id="booking" className="w-full section-padding" style={{ backgroundColor: '#1a1a1a' }}>
       <div className="container-narrow">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

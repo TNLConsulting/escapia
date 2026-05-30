@@ -9,7 +9,7 @@ export function Accommodations() {
   const t = translations[language];
 
   return (
-    <section id="accommodations" className="section-padding" style={{ backgroundColor: '#1a1a1a' }}>
+    <section id="accommodations" className="w-full section-padding" style={{ backgroundColor: '#1a1a1a' }}>
       <div className="container-narrow">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

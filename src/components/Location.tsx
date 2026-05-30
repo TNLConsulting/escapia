@@ -10,7 +10,7 @@ export function Location() {
   const t = translations[language];
 
   return (
-    <section id="location" className="section-padding" style={{ backgroundColor: '#1a1a1a' }}>
+    <section id="location" className="w-full section-padding" style={{ backgroundColor: '#1a1a1a' }}>
       <div className="container-narrow">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
