@@ -2,7 +2,6 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
-import { motion } from "framer-motion";
 import { MapPin, Train, Plane, Clock } from "lucide-react";
 
 export function Location() {
@@ -12,24 +11,16 @@ export function Location() {
   return (
     <section id="location" className="w-full section-padding" style={{ backgroundColor: '#1a1a1a' }}>
       <div className="container-narrow">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+        <h2
           className="text-4xl md:text-5xl font-serif font-light text-center mb-16"
           style={{ color: '#d4a574' }}
         >
           {t.location.title}
-        </motion.h2>
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Address & Map */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+          <div
             className="space-y-8"
           >
             <div 
@@ -87,14 +78,10 @@ export function Location() {
                 <p style={{ color: '#a8a8a8' }}>{t.location.transportation.air}</p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Check-in Times */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+          <div
             className="space-y-8"
           >
             <div 
@@ -156,7 +143,7 @@ export function Location() {
                 <p className="text-xs mt-2" style={{ color: '#a8a8a8' }}>2275 Lille, Belgium</p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

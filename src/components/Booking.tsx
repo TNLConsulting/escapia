@@ -2,7 +2,6 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
-import { motion } from "framer-motion";
 import { useState } from "react";
 
 export function Booking() {
@@ -61,22 +60,14 @@ export function Booking() {
   return (
     <section id="booking" className="w-full section-padding" style={{ backgroundColor: '#1a1a1a' }}>
       <div className="container-narrow">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+        <h2
           className="text-4xl md:text-5xl font-serif font-light text-center mb-16"
           style={{ color: '#d4a574' }}
         >
           {t.booking.title}
-        </motion.h2>
+        </h2>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
+        <div
           className="max-w-2xl mx-auto"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -273,7 +264,7 @@ export function Booking() {
               {submitted ? "✓ " + t.booking.form.submit : t.booking.form.submit}
             </button>
           </form>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

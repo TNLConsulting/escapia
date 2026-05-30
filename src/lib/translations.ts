@@ -8,10 +8,14 @@ export const translations = {
       book: "Book Now",
     },
     hero: {
+      label: "A hideaway in nature",
       title: "Disconnect to Reconnect",
       subtitle: "Immerse yourself in nature within our bio-integrated forest dome",
-      cta1: "Book Your Escape",
-      cta2: "Explore Experience",
+      cta: {
+        reserve: "Book Your Escape",
+        discover: "Explore Experience",
+      },
+      scroll: "Scroll to explore",
     },
     experience: {
       title: "The Escapia Experience",
@@ -53,8 +57,16 @@ export const translations = {
       title: "What's Included",
       items: [
         {
+          title: "Private Jacuzzi",
+          description: "Soak under the stars in your own heated outdoor tub",
+        },
+        {
           title: "King-Size Bed",
           description: "Luxurious comfort in your private dome sanctuary",
+        },
+        {
+          title: "Fire Pit & BBQ",
+          description: "Gather around the warmth and cook outdoors",
         },
         {
           title: "Private Forest Setting",
@@ -65,16 +77,20 @@ export const translations = {
           description: "Full-length windows and dome ceiling for celestial views",
         },
         {
-          title: "Fully Equipped",
-          description: "Bathroom with premium fixtures and heated floor",
+          title: "Fully Equipped Bathroom",
+          description: "Premium fixtures, heated floor, luxury toiletries",
         },
         {
           title: "WiFi & Connectivity",
           description: "Stay connected when you need to, disconnect when you want to",
         },
         {
-          title: "Full Kitchen",
+          title: "Fully Equipped Kitchen",
           description: "Everything you need to prepare meals during your stay",
+        },
+        {
+          title: "Climate Control",
+          description: "Temperature and humidity perfectly adjusted for comfort",
         },
       ],
     },
@@ -133,10 +149,14 @@ export const translations = {
       book: "Boek Nu",
     },
     hero: {
+      label: "Een schuilplaats in de natuur",
       title: "Onderbreken om Opnieuw Verbonden te Raken",
       subtitle: "Onderdom jezelf in de natuur binnen onze bio-geïntegreerde boskoepel",
-      cta1: "Boek Je Ontsnapping",
-      cta2: "Ontdek Beleving",
+      cta: {
+        reserve: "Boek Je Ontsnapping",
+        discover: "Ontdek Beleving",
+      },
+      scroll: "Scroll om te verkennen",
     },
     experience: {
       title: "De Escapia Beleving",
@@ -178,8 +198,16 @@ export const translations = {
       title: "Wat is Inbegrepen",
       items: [
         {
+          title: "Privé Jacuzzi",
+          description: "Weken onder de sterren in je eigen verwarmde buitenbad",
+        },
+        {
           title: "King-Size Bed",
           description: "Luxe comfort in je privé koepelheiligtum",
+        },
+        {
+          title: "Vuurpit & BBQ",
+          description: "Verzamel je rond de warmte en kook buitenshuis",
         },
         {
           title: "Privé Bossetting",
@@ -190,16 +218,20 @@ export const translations = {
           description: "Ramen van vloer tot plafond en koepeldak voor hemelse uitzichten",
         },
         {
-          title: "Volledig Uitgerust",
-          description: "Badkamer met premium voorzieningen en verwarmde vloer",
+          title: "Volledig Uitgeruste Badkamer",
+          description: "Premium voorzieningen, verwarmde vloer, luxe toiletartikelen",
         },
         {
           title: "WiFi & Connectiviteit",
           description: "Blijf verbonden als je wilt, verbreek als je dat wilt",
         },
         {
-          title: "Volledige Keuken",
+          title: "Volledig Uitgeruste Keuken",
           description: "Alles wat je nodig hebt om maaltijden klaar te maken tijdens je verblijf",
+        },
+        {
+          title: "Klimaatcontrole",
+          description: "Temperatuur en vochtigheid perfect afgesteld voor comfort",
         },
       ],
     },

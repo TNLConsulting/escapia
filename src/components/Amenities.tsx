@@ -2,15 +2,18 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
-import { Wind, Bed, Trees, Wifi, Coffee, UtensilsCrossed } from "lucide-react";
+import { Wind, Bed, Trees, Wifi, Coffee, UtensilsCrossed, Droplet, Thermometer } from "lucide-react";
 
 const amenityIcons = [
-  Bed,
-  Trees,
-  Wind,
-  Coffee,
-  Wifi,
-  UtensilsCrossed,
+  Droplet,     // Jacuzzi
+  Bed,         // Bed
+  Wind,        // Fire Pit
+  Trees,       // Forest
+  Thermometer, // Stargazing
+  Coffee,      // Bathroom
+  Wifi,        // WiFi
+  UtensilsCrossed, // Kitchen
+  Wind,        // Climate
 ];
 
 export function Amenities() {
@@ -20,21 +23,17 @@ export function Amenities() {
   return (
     <section id="amenities" className="w-full section-padding" style={{ backgroundColor: '#1a1a1a' }}>
       <div className="container-narrow">
-        <h2 className="text-4xl md:text-5xl font-serif font-light text-center mb-6" style={{ color: '#d4a574' }}>
+        <h2 className="text-4xl md:text-5xl font-serif font-light text-center mb-16" style={{ color: '#d4a574' }}>
           {t.amenities.title}
         </h2>
 
-        <p className="text-center text-lg mb-16 max-w-3xl mx-auto" style={{ color: '#a8a8a8' }}>
-          {t.amenities.subtitle}
-        </p>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {t.amenities.items.map((item, index) => {
             const Icon = amenityIcons[index] || Wind;
             return (
               <div
                 key={index}
-                className="rounded-lg p-6 transition-all duration-300"
+                className="rounded-lg p-6"
                 style={{
                   backgroundColor: '#1a1a1a',
                   border: '1px solid rgba(212, 165, 116, 0.2)',

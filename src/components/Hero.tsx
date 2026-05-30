@@ -2,7 +2,6 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
-import { ChevronDown } from "lucide-react";
 
 export function Hero() {
   const { language } = useLanguage();
@@ -20,7 +19,11 @@ export function Hero() {
         backgroundColor: '#1a1a1a',
       }}
     >
-      <div className="container-narrow text-center space-y-8">
+      <div className="container-narrow text-center space-y-6">
+        <p className="text-sm tracking-widest uppercase" style={{ color: '#d4a574' }}>
+          {t.hero.label}
+        </p>
+
         <h1
           className="text-5xl md:text-7xl font-serif font-light leading-tight"
           style={{ color: '#e8e8e8' }}
@@ -35,21 +38,23 @@ export function Hero() {
           {t.hero.subtitle}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="button-primary">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+          <a href="#booking" className="button-primary text-center">
             {t.hero.cta.reserve}
-          </button>
-          <button className="button-secondary">
+          </a>
+          <a href="#experience" className="button-secondary text-center">
             {t.hero.cta.discover}
-          </button>
+          </a>
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
-        <span className="text-xs tracking-widest uppercase text-muted-foreground" style={{ color: '#a8a8a8' }}>
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
+        <span className="text-xs tracking-widest uppercase" style={{ color: '#a8a8a8' }}>
           {t.hero.scroll}
         </span>
-        <ChevronDown className="w-4 h-4 mx-auto mt-2 animate-bounce" style={{ color: '#d4a574' }} />
+        <svg className="w-4 h-4 mx-auto mt-2" style={{ color: '#d4a574' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
       </div>
     </section>
   );

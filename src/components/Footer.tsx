@@ -2,7 +2,6 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
-import { motion } from "framer-motion";
 import { Mail, MapPin } from "lucide-react";
 
 export function Footer() {
@@ -20,27 +19,17 @@ export function Footer() {
       <div className="container-narrow">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* About */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <h3 className="text-2xl font-serif font-light mb-4" style={{ color: '#d4a574' }}>
               Forêt Dôme
             </h3>
             <p className="leading-relaxed text-sm" style={{ color: '#a8a8a8' }}>
               {t.footer.about}
             </p>
-          </motion.div>
+          </div>
 
           {/* Contact */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <h4 className="text-lg font-serif font-light mb-4" style={{ color: '#e8e8e8' }}>
               {t.footer.contact}
             </h4>
@@ -64,15 +53,10 @@ export function Footer() {
                 Bosuilweg 19, Lille
               </a>
             </div>
-          </motion.div>
+          </div>
 
           {/* Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <h4 className="text-lg font-serif font-light mb-4" style={{ color: '#e8e8e8' }}>
               Links
             </h4>
@@ -99,7 +83,7 @@ export function Footer() {
                 {t.footer.links.booking}
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Divider */}
