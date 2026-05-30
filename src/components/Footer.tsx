@@ -20,7 +20,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* About */}
           <div>
-            <h3 className="text-2xl font-serif font-light mb-4" style={{ color: '#d4a574' }}>
+            <h3 className="text-2xl font-serif font-light mb-4" style={{ color: '#e5b87a' }}>
               Forêt Dôme
             </h3>
             <p className="leading-relaxed text-sm" style={{ color: '#a8a8a8' }}>
@@ -30,7 +30,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-serif font-light mb-4" style={{ color: '#e8e8e8' }}>
+            <h4 className="text-lg font-serif font-light mb-4" style={{ color: '#d0d0d0' }}>
               {t.footer.contact}
             </h4>
             <div className="space-y-3">
@@ -57,7 +57,7 @@ export function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="text-lg font-serif font-light mb-4" style={{ color: '#e8e8e8' }}>
+            <h4 className="text-lg font-serif font-light mb-4" style={{ color: '#d0d0d0' }}>
               Links
             </h4>
             <div className="space-y-2">

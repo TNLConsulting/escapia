@@ -62,7 +62,7 @@ export function Booking() {
       <div className="container-narrow">
         <h2
           className="text-4xl md:text-5xl font-serif font-light text-center mb-16"
-          style={{ color: '#d4a574' }}
+          style={{ color: '#e5b87a' }}
         >
           {t.booking.title}
         </h2>
@@ -73,7 +73,7 @@ export function Booking() {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Name */}
             <div>
-              <label className="block mb-2 font-light text-sm" style={{ color: '#e8e8e8' }}>
+              <label className="block mb-2 font-light text-sm" style={{ color: '#d0d0d0' }}>
                 {t.booking.form.name} *
               </label>
               <input
@@ -86,10 +86,10 @@ export function Booking() {
                 style={{
                   backgroundColor: '#000',
                   border: '1px solid rgba(212, 165, 116, 0.2)',
-                  color: '#e8e8e8',
+                  color: '#d0d0d0',
                 }}
                 onFocus={(e) => {
-                  e.currentTarget.style.borderColor = '#d4a574';
+                  e.currentTarget.style.borderColor = '#e5b87a';
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(212, 165, 116, 0.2)';
@@ -100,7 +100,7 @@ export function Booking() {
 
             {/* Email */}
             <div>
-              <label className="block mb-2 font-light text-sm" style={{ color: '#e8e8e8' }}>
+              <label className="block mb-2 font-light text-sm" style={{ color: '#d0d0d0' }}>
                 {t.booking.form.email} *
               </label>
               <input
@@ -113,10 +113,10 @@ export function Booking() {
                 style={{
                   backgroundColor: '#000',
                   border: '1px solid rgba(212, 165, 116, 0.2)',
-                  color: '#e8e8e8',
+                  color: '#d0d0d0',
                 }}
                 onFocus={(e) => {
-                  e.currentTarget.style.borderColor = '#d4a574';
+                  e.currentTarget.style.borderColor = '#e5b87a';
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(212, 165, 116, 0.2)';
@@ -127,7 +127,7 @@ export function Booking() {
 
             {/* Phone */}
             <div>
-              <label className="block mb-2 font-light text-sm" style={{ color: '#e8e8e8' }}>
+              <label className="block mb-2 font-light text-sm" style={{ color: '#d0d0d0' }}>
                 {t.booking.form.phone} *
               </label>
               <input
@@ -140,10 +140,10 @@ export function Booking() {
                 style={{
                   backgroundColor: '#000',
                   border: '1px solid rgba(212, 165, 116, 0.2)',
-                  color: '#e8e8e8',
+                  color: '#d0d0d0',
                 }}
                 onFocus={(e) => {
-                  e.currentTarget.style.borderColor = '#d4a574';
+                  e.currentTarget.style.borderColor = '#e5b87a';
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(212, 165, 116, 0.2)';
@@ -154,7 +154,7 @@ export function Booking() {
 
             {/* Guests */}
             <div>
-              <label className="block mb-2 font-light text-sm" style={{ color: '#e8e8e8' }}>
+              <label className="block mb-2 font-light text-sm" style={{ color: '#d0d0d0' }}>
                 {t.booking.form.guests}
               </label>
               <select
@@ -165,10 +165,10 @@ export function Booking() {
                 style={{
                   backgroundColor: '#000',
                   border: '1px solid rgba(212, 165, 116, 0.2)',
-                  color: '#e8e8e8',
+                  color: '#d0d0d0',
                 }}
                 onFocus={(e) => {
-                  e.currentTarget.style.borderColor = '#d4a574';
+                  e.currentTarget.style.borderColor = '#e5b87a';
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(212, 165, 116, 0.2)';
@@ -184,7 +184,7 @@ export function Booking() {
             {/* Check-in & Check-out */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block mb-2 font-light text-sm" style={{ color: '#e8e8e8' }}>
+                <label className="block mb-2 font-light text-sm" style={{ color: '#d0d0d0' }}>
                   {t.booking.form.checkIn} *
                 </label>
                 <input
@@ -196,10 +196,10 @@ export function Booking() {
                   style={{
                     backgroundColor: '#000',
                     border: '1px solid rgba(212, 165, 116, 0.2)',
-                    color: '#e8e8e8',
+                    color: '#d0d0d0',
                   }}
                   onFocus={(e) => {
-                    e.currentTarget.style.borderColor = '#d4a574';
+                    e.currentTarget.style.borderColor = '#e5b87a';
                   }}
                   onBlur={(e) => {
                     e.currentTarget.style.borderColor = 'rgba(212, 165, 116, 0.2)';
@@ -208,7 +208,7 @@ export function Booking() {
                 />
               </div>
               <div>
-                <label className="block mb-2 font-light text-sm" style={{ color: '#e8e8e8' }}>
+                <label className="block mb-2 font-light text-sm" style={{ color: '#d0d0d0' }}>
                   {t.booking.form.checkOut} *
                 </label>
                 <input
@@ -220,10 +220,10 @@ export function Booking() {
                   style={{
                     backgroundColor: '#000',
                     border: '1px solid rgba(212, 165, 116, 0.2)',
-                    color: '#e8e8e8',
+                    color: '#d0d0d0',
                   }}
                   onFocus={(e) => {
-                    e.currentTarget.style.borderColor = '#d4a574';
+                    e.currentTarget.style.borderColor = '#e5b87a';
                   }}
                   onBlur={(e) => {
                     e.currentTarget.style.borderColor = 'rgba(212, 165, 116, 0.2)';
@@ -235,7 +235,7 @@ export function Booking() {
 
             {/* Special Requests */}
             <div>
-              <label className="block mb-2 font-light text-sm" style={{ color: '#e8e8e8' }}>
+              <label className="block mb-2 font-light text-sm" style={{ color: '#d0d0d0' }}>
                 {t.booking.form.specialRequests}
               </label>
               <textarea
@@ -248,10 +248,10 @@ export function Booking() {
                 style={{
                   backgroundColor: '#000',
                   border: '1px solid rgba(212, 165, 116, 0.2)',
-                  color: '#e8e8e8',
+                  color: '#d0d0d0',
                 }}
                 onFocus={(e) => {
-                  e.currentTarget.style.borderColor = '#d4a574';
+                  e.currentTarget.style.borderColor = '#e5b87a';
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(212, 165, 116, 0.2)';
