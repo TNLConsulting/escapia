@@ -2,92 +2,55 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
-import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import { useState, useEffect } from "react";
 
 export function Hero() {
   const { language } = useLanguage();
   const t = translations[language];
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <section
+      id="hero"
       className="relative w-full h-screen flex items-center justify-center overflow-hidden pt-20"
       style={{
         backgroundImage: `linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(26, 26, 26, 0.8) 100%), 
                          radial-gradient(ellipse at 50% 30%, rgba(212, 165, 116, 0.1) 0%, transparent 60%)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundColor: '#1a1a1a',
       }}
     >
-      {/* Parallax Background */}
-      <motion.div
-        className="absolute inset-0 -z-10"
-        style={{
-          transform: `translateY(${scrollY * 0.5}px)`,
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-dark/50 to-dark" />
-      </motion.div>
-
-      {/* Content */}
       <div className="container-narrow text-center space-y-8">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
+        <h1
           className="text-5xl md:text-7xl font-serif font-light leading-tight"
           style={{ color: '#e8e8e8' }}
         >
           {t.hero.title}
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-lg md:text-xl max-w-3xl mx-auto"
+        <p
+          className="text-lg md:text-xl text-center max-w-2xl mx-auto font-light"
           style={{ color: '#a8a8a8' }}
         >
           {t.hero.subtitle}
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="flex flex-col md:flex-row gap-4 justify-center pt-8"
-        >
-          <a href="#booking" className="button-primary">
-            {t.hero.cta1}
-          </a>
-          <a href="#experience" className="button-secondary">
-            {t.hero.cta2}
-          </a>
-        </motion.div>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <button className="button-primary">
+            {t.hero.cta.reserve}
+          </button>
+          <button className="button-secondary">
+            {t.hero.cta.discover}
+          </button>
+        </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <ChevronDown className="w-8 h-8" style={{ color: '#d4a574' }} />
-        </motion.div>
-      </motion.div>
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+        <span className="text-xs tracking-widest uppercase text-muted-foreground" style={{ color: '#a8a8a8' }}>
+          {t.hero.scroll}
+        </span>
+        <ChevronDown className="w-4 h-4 mx-auto mt-2 animate-bounce" style={{ color: '#d4a574' }} />
+      </div>
     </section>
   );
 }
