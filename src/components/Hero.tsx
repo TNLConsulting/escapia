@@ -11,10 +11,13 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full h-screen bg-cover bg-center flex flex-col items-center justify-center"
+      className="relative w-full h-screen flex flex-col items-center justify-center"
       style={{
-        backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/dome-twin.jpg')",
+        backgroundImage: "linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('/dome-twin.jpg')",
         backgroundColor: "#1a1a1a",
+        backgroundSize: "cover",
+        backgroundPosition: "center 30%",
+        backgroundAttachment: "fixed",
       }}
     >
       {/* Navigation (Floating) */}
