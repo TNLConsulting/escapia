@@ -20,7 +20,7 @@ export function Footer() {
       <div className="container-narrow">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* About */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -32,10 +32,10 @@ export function Footer() {
             <p className="leading-relaxed text-sm" style={{ color: '#a8a8a8' }}>
               {t.footer.about}
             </p>
-          </motion.div>
+          </div>
 
           {/* Contact */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
@@ -64,10 +64,10 @@ export function Footer() {
                 Bosuilweg 19, Lille
               </a>
             </div>
-          </motion.div>
+          </div>
 
           {/* Links */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -99,7 +99,7 @@ export function Footer() {
                 {t.footer.links.booking}
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Divider */}

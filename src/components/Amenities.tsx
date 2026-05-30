@@ -41,7 +41,7 @@ export function Amenities() {
   return (
     <section id="amenities" className="w-full section-padding" style={{ backgroundColor: '#1a1a1a' }}>
       <div className="container-narrow">
-        <motion.h2
+        <h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -50,9 +50,9 @@ export function Amenities() {
           style={{ color: '#d4a574' }}
         >
           {t.amenities.title}
-        </motion.h2>
+        </h2>
 
-        <motion.div
+        <div
           variants={containerVariants}
           initial="visible"
           whileInView="visible"
@@ -62,7 +62,7 @@ export function Amenities() {
           {t.amenities.items.map((item, index) => {
             const Icon = icons[index];
             return (
-              <motion.div
+              <div
                 key={index}
                 variants={itemVariants}
                 className="rounded-lg p-8 transition-all duration-300 group"
@@ -91,10 +91,10 @@ export function Amenities() {
                 <p className="text-sm leading-relaxed" style={{ color: '#a8a8a8' }}>
                   {item.description}
                 </p>
-              </motion.div>
+              </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -61,7 +61,7 @@ export function Booking() {
   return (
     <section id="booking" className="w-full section-padding" style={{ backgroundColor: '#1a1a1a' }}>
       <div className="container-narrow">
-        <motion.h2
+        <h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -70,9 +70,9 @@ export function Booking() {
           style={{ color: '#d4a574' }}
         >
           {t.booking.title}
-        </motion.h2>
+        </h2>
 
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -273,7 +273,7 @@ export function Booking() {
               {submitted ? "✓ " + t.booking.form.submit : t.booking.form.submit}
             </button>
           </form>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
