@@ -13,7 +13,7 @@ export function Accommodations() {
   ];
 
   return (
-    <section id="accommodations" className="w-full py-20" style={{ backgroundColor: "#000" }}>
+    <section id="accommodations" className="w-full py-20" style={{ background: "linear-gradient(to bottom, #0a1a0f, #000)" }}>
       <div className="max-w-7xl mx-auto px-6">
         <p className="text-xs tracking-widest uppercase text-center mb-2" style={{ color: "#d4a574" }}>Your Sanctuary</p>
         <h2 className="text-5xl font-serif font-light text-center mb-6" style={{ color: "#e8e8e8" }}>

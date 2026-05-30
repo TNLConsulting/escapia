@@ -14,8 +14,9 @@ export function Hero() {
       style={{
         backgroundImage: "linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('/dome-twin.jpg')",
         backgroundColor: "#000",
-        backgroundSize: "120%",
+        backgroundSize: "110%",
         backgroundPosition: "center 70%",
+        backgroundAttachment: "fixed",
       }}
     >
       {/* Navigation (Floating) */}
