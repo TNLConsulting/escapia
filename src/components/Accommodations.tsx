@@ -1,54 +1,68 @@
 "use client";
 
-import { useLanguage } from "@/contexts/LanguageContext";
-import { translations } from "@/lib/translations";
+import { Users, Wind, Droplet, Wifi, Coffee, Thermometer } from "lucide-react";
 
 export function Accommodations() {
-  const { language } = useLanguage();
-  const t = translations[language];
+  const specs = [
+    { icon: Users, label: "2 Guests" },
+    { icon: Wind, label: "Twin Domes" },
+    { icon: Droplet, label: "Rain Shower" },
+    { icon: Wifi, label: "High-Speed WiFi" },
+    { icon: Coffee, label: "Nespresso" },
+    { icon: Thermometer, label: "Climate Control" }
+  ];
 
   return (
-    <section id="accommodations" className="w-full section-padding" style={{ backgroundColor: '#1a1a1a' }}>
-      <div className="container-narrow">
-        <h2 className="text-4xl md:text-5xl font-serif font-light text-center mb-4" style={{ color: '#d4a574' }}>
-          {t.accommodations.title}
+    <section id="accommodations" className="w-full py-20" style={{ backgroundColor: "#1a1a1a" }}>
+      <div className="max-w-7xl mx-auto px-6">
+        <p className="text-xs tracking-widest uppercase text-center mb-2" style={{ color: "#d4a574" }}>Your Sanctuary</p>
+        <h2 className="text-5xl font-serif font-light text-center mb-6" style={{ color: "#e8e8e8" }}>
+          The <span style={{ color: "#d4a574" }}>Dome</span>
         </h2>
-
-        <p className="text-center text-lg mb-16" style={{ color: '#d4a574' }}>
-          {t.accommodations.description}
+        <p className="text-center max-w-3xl mx-auto mb-12" style={{ color: "#a8a8a8" }}>
+          Two connected domes create one intimate sanctuary — a living space and sleeping retreat<br />
+          linked by a wooden corridor, designed exclusively for two.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h3 className="text-3xl font-serif font-light" style={{ color: '#e8e8e8' }}>
-              {t.accommodations.twinDomeTitle}
-            </h3>
-            <p className="leading-relaxed text-lg" style={{ color: '#a8a8a8' }}>
-              {t.accommodations.twinDomeDesc}
-            </p>
-
-            <div className="space-y-3 pt-6" style={{ borderTop: '1px solid rgba(212, 165, 116, 0.2)' }}>
-              {t.accommodations.specs.map((spec, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: '#d4a574' }} />
-                  <span style={{ color: '#e8e8e8' }}>{spec}</span>
-                </div>
-              ))}
-            </div>
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          {/* Left - Photo */}
+          <div className="rounded-lg overflow-hidden">
+            <img src="/dome-exterior.jpg" alt="Twin dome exterior" className="w-full h-auto rounded-lg" />
           </div>
 
-          <div
-            className="relative rounded-lg h-96 flex items-center justify-center"
-            style={{
-              background: 'linear-gradient(to bottom right, rgba(212, 165, 116, 0.1), rgba(139, 157, 111, 0.1))',
-              border: '1px solid rgba(212, 165, 116, 0.2)',
-            }}
-          >
-            <div className="text-center">
-              <div className="text-5xl mb-4">🏕️</div>
-              <p className="text-sm" style={{ color: '#a8a8a8' }}>Twin Forest Domes</p>
-              <p className="text-xs mt-2" style={{ color: '#a8a8a8' }}>Bio-integrated sanctuary</p>
+          {/* Right - Content */}
+          <div>
+            <h3 className="text-3xl font-serif font-light mb-6" style={{ color: "#e8e8e8" }}>
+              Two Domes, One Experience
+            </h3>
+            <p className="text-sm mb-8" style={{ color: "#a8a8a8", lineHeight: "1.8" }}>
+              Wake up in a cocoon of glass and moss. Our unique twin-dome structure offers the perfect balance of openness and intimacy — a spacious living dome flows into a cozy sleeping sanctuary, all wrapped in the embrace of the ancient forest.
+            </p>
+
+            {/* Icons Grid */}
+            <div className="grid grid-cols-3 gap-6 mb-8">
+              {specs.map((spec, i) => {
+                const Icon = spec.icon;
+                return (
+                  <div key={i} className="text-center">
+                    <div className="mb-3 flex justify-center">
+                      <Icon size={28} style={{ color: "#d4a574" }} />
+                    </div>
+                    <p className="text-xs" style={{ color: "#a8a8a8" }}>{spec.label}</p>
+                  </div>
+                );
+              })}
             </div>
+
+            <button
+              className="px-8 py-3 rounded-lg font-medium border-2 transition-all"
+              style={{
+                borderColor: "#d4a574",
+                color: "#d4a574",
+              }}
+            >
+              Check Availability
+            </button>
           </div>
         </div>
       </div>
