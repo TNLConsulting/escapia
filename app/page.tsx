@@ -1,8 +1,23 @@
+import { Navigation } from "@/components/Navigation";
+import { Hero } from "@/components/Hero";
+import { Experience } from "@/components/Experience";
+import { Accommodations } from "@/components/Accommodations";
+import { Amenities } from "@/components/Amenities";
+import { Booking } from "@/components/Booking";
+import { Location } from "@/components/Location";
+import { Footer } from "@/components/Footer";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-4xl font-bold">Welcome to Escapia</h1>
-      <p className="text-lg">Disconnect to Reconnect</p>
+    <main className="w-full">
+      <Navigation />
+      <Hero />
+      <Experience />
+      <Accommodations />
+      <Amenities />
+      <Booking />
+      <Location />
+      <Footer />
     </main>
   );
 }
