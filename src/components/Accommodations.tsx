@@ -65,6 +65,48 @@ export function Accommodations() {
             </button>
           </div>
         </div>
+
+        {/* Where Forest Meets Comfort Section */}
+        <div className="grid md:grid-cols-2 gap-12 items-center mt-20">
+          {/* Left - Photo */}
+          <div className="rounded-lg overflow-hidden h-80 order-2 md:order-1">
+            <img src="/dome-exterior.jpg" alt="Forest meets comfort" className="w-full h-full object-cover rounded-lg" />
+          </div>
+
+          {/* Right - Content */}
+          <div className="order-1 md:order-2">
+            <h3 className="text-4xl font-serif font-light mb-6 tracking-wide" style={{ color: "#e8e8e8", letterSpacing: "0.05em" }}>
+              Where Forest<br />Meets Comfort
+            </h3>
+            <p className="text-base mb-8 font-light" style={{ color: "#a8a8a8", lineHeight: "1.9", letterSpacing: "0.01em" }}>
+              Every detail has been crafted for your escape. A king-size bed faces panoramic windows that frame the forest canopy. The rain shower brings nature inside, while the living dome offers a space to unwind, sip morning coffee, and simply breathe.
+            </p>
+
+            {/* Bullet Points */}
+            <ul className="space-y-3 mb-8">
+              {[
+                "Private wooden terrace overlooking the forest",
+                "Floor-to-ceiling windows with forest views",
+                "Living moss roof that breathes with nature"
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-4 text-sm" style={{ color: "#a8a8a8" }}>
+                  <span style={{ color: "#d4a574", marginTop: "4px" }}>●</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <button
+              className="px-8 py-3 rounded-lg font-medium transition-all"
+              style={{
+                backgroundColor: "#d4a574",
+                color: "#1a1a1a",
+              }}
+            >
+              Reserve Your Escape
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
