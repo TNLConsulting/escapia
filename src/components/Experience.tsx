@@ -31,7 +31,7 @@ export function Experience() {
   return (
     <section id="experience" className="w-full section-padding" style={{ backgroundColor: '#1a1a1a' }}>
       <div className="container-narrow">
-        <h2
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -40,9 +40,9 @@ export function Experience() {
           style={{ color: '#d4a574' }}
         >
           {t.experience.title}
-        </h2>
+        </motion.h2>
 
-        <div
+        <motion.div
           variants={containerVariants}
           initial="visible"
           whileInView="visible"
@@ -50,7 +50,7 @@ export function Experience() {
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           {t.experience.cards.map((card, index) => (
-            <div
+            <motion.div
               key={index}
               variants={itemVariants}
               className="rounded-lg p-8 transition-all duration-300 hover:shadow-lg group"
@@ -80,9 +80,9 @@ export function Experience() {
               <p className="leading-relaxed" style={{ color: '#a8a8a8' }}>
                 {card.description}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

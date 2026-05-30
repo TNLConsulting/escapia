@@ -11,7 +11,7 @@ export function Accommodations() {
   return (
     <section id="accommodations" className="w-full section-padding" style={{ backgroundColor: '#1a1a1a' }}>
       <div className="container-narrow">
-        <h2
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -20,9 +20,9 @@ export function Accommodations() {
           style={{ color: '#d4a574' }}
         >
           {t.accommodations.title}
-        </h2>
+        </motion.h2>
 
-        <p
+        <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -31,11 +31,11 @@ export function Accommodations() {
           style={{ color: '#d4a574' }}
         >
           {t.accommodations.description}
-        </p>
+        </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Side - Description */}
-          <div
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -52,7 +52,7 @@ export function Accommodations() {
             {/* Specs */}
             <div className="space-y-3 pt-6" style={{ borderTop: '1px solid rgba(212, 165, 116, 0.2)' }}>
               {t.accommodations.specs.map((spec, index) => (
-                <div
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -62,13 +62,13 @@ export function Accommodations() {
                 >
                   <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: '#d4a574' }} />
                   <span style={{ color: '#e8e8e8' }}>{spec}</span>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Side - Image Placeholder */}
-          <div
+          <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -86,7 +86,7 @@ export function Accommodations() {
                 Bio-integrated sanctuary
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

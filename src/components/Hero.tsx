@@ -28,18 +28,18 @@ export function Hero() {
       }}
     >
       {/* Parallax Background */}
-      <div
+      <motion.div
         className="absolute inset-0 -z-10"
         style={{
           transform: `translateY(${scrollY * 0.5}px)`,
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-dark/50 to-dark" />
-      </div>
+      </motion.div>
 
       {/* Content */}
       <div className="container-narrow text-center space-y-8">
-        <h1
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
@@ -47,9 +47,9 @@ export function Hero() {
           style={{ color: '#e8e8e8' }}
         >
           {t.hero.title}
-        </h1>
+        </motion.h1>
 
-        <p
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
@@ -57,9 +57,9 @@ export function Hero() {
           style={{ color: '#a8a8a8' }}
         >
           {t.hero.subtitle}
-        </p>
+        </motion.p>
 
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -71,23 +71,23 @@ export function Hero() {
           <a href="#experience" className="button-secondary">
             {t.hero.cta2}
           </a>
-        </div>
+        </motion.div>
       </div>
 
       {/* Scroll Indicator */}
-      <div
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
-        <div
+        <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
           <ChevronDown className="w-8 h-8" style={{ color: '#d4a574' }} />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
