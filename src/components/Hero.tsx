@@ -12,7 +12,7 @@ export function Hero() {
       id="hero"
       className="relative w-full h-screen bg-cover bg-center flex items-center justify-center"
       style={{
-        backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/render-night.jpg')",
+        backgroundImage: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/dome-twin.jpg')",
         backgroundColor: "#1a1a1a",
       }}
     >
