@@ -2,11 +2,11 @@
 
 @layer base {
   :root {
-    --primary: #d4a574;
+    --primary: #e5b87a;
     --moss: #8b9d6f;
     --dark: #1a1a1a;
     --light: #f5f5f5;
-    --text: #e8e8e8;
+    --text: #d0d0d0;
     --text-muted: #a8a8a8;
   }
 
@@ -18,11 +18,12 @@
 
   html {
     scroll-behavior: smooth;
+    font-size: 17px;
   }
 
   body {
     background-color: rgb(26, 26, 26);
-    color: rgb(232, 232, 232);
+    color: #d0d0d0;
     font-family: system-ui, -apple-system, sans-serif;
     font-feature-settings: "rlig" 1 "calt" 1;
   }
@@ -55,7 +56,7 @@
   }
 
   .gradient-primary {
-    background: linear-gradient(135deg, #d4a574 0%, #8b9d6f 100%);
+    background: linear-gradient(135deg, #e5b87a 0%, #8b9d6f 100%);
   }
 
   .section-padding {
@@ -78,14 +79,14 @@
     padding-bottom: 0.75rem;
     border-radius: 0.5rem;
     font-weight: 500;
-    background-color: rgb(212, 165, 116);
+    background-color: #e5b87a;
     color: rgb(26, 26, 26);
     transition-property: all;
     transition-duration: 300ms;
   }
 
   .button-primary:hover {
-    box-shadow: 0 20px 25px -5px rgba(212, 165, 116, 0.3);
+    box-shadow: 0 20px 25px -5px rgba(229, 184, 122, 0.3);
     transform: scale(1.05);
   }
 
@@ -97,14 +98,14 @@
     padding-bottom: 0.75rem;
     border-radius: 0.5rem;
     font-weight: 500;
-    border: 2px solid rgb(212, 165, 116);
-    color: rgb(212, 165, 116);
+    border: 2px solid #e5b87a;
+    color: #e5b87a;
     transition-property: all;
     transition-duration: 300ms;
   }
 
   .button-secondary:hover {
-    background-color: rgb(212, 165, 116);
+    background-color: #e5b87a;
     color: rgb(26, 26, 26);
   }
 }
