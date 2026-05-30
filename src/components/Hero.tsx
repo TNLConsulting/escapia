@@ -10,17 +10,17 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20 md:pt-0"
       style={{
         backgroundImage: "linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('/dome-twin.jpg')",
         backgroundColor: "#000",
         backgroundSize: "110%",
         backgroundPosition: "center 85%",
-        backgroundAttachment: "fixed",
+        backgroundAttachment: "auto",
       }}
     >
       {/* Navigation (Fixed/Sticky) */}
-      <nav className="fixed top-0 left-0 right-0 w-full px-6 py-6 z-50">
+      <nav className="fixed top-0 left-0 right-0 w-full px-3 md:px-6 py-4 md:py-6 z-50">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <a href="#" className="font-serif text-2xl tracking-wider" style={{ color: "#9d7e44" }}>
             Forêt Dôme
