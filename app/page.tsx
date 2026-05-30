@@ -1,4 +1,3 @@
-import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Experience } from "@/components/Experience";
 import { Accommodations } from "@/components/Accommodations";
@@ -10,7 +9,6 @@ import { Footer } from "@/components/Footer";
 export default function Home() {
   return (
     <main className="w-full">
-      <Navigation />
       <Hero />
       <Experience />
       <Accommodations />
