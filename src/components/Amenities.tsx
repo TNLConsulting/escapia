@@ -1,52 +1,67 @@
 "use client";
 
-import { useLanguage } from "@/contexts/LanguageContext";
-import { translations } from "@/lib/translations";
-import { Wind, Bed, Trees, Wifi, Coffee, UtensilsCrossed, Droplet, Thermometer } from "lucide-react";
-
-const amenityIcons = [
-  Droplet,     // Jacuzzi
-  Bed,         // Bed
-  Wind,        // Fire Pit
-  Trees,       // Forest
-  Thermometer, // Stargazing
-  Coffee,      // Bathroom
-  Wifi,        // WiFi
-  UtensilsCrossed, // Kitchen
-  Wind,        // Climate
-];
+import { Bed, AlertTriangle, Sparkles, Coffee, Wifi, UtensilsCrossed } from "lucide-react";
 
 export function Amenities() {
-  const { language } = useLanguage();
-  const t = translations[language];
+  const amenities = [
+    { 
+      icon: Bed, 
+      title: "King-Size Bed", 
+      desc: "Sink into premium bedding with panoramic forest views from your sleeping sanctuary." 
+    },
+    { 
+      icon: AlertTriangle, 
+      title: "Private Forest Setting", 
+      desc: "Completely secluded in nature — no neighbours, no noise, just you and the forest." 
+    },
+    { 
+      icon: Sparkles, 
+      title: "Stargazing Windows", 
+      desc: "Floor-to-ceiling windows and a glass roof for unforgettable starlit nights." 
+    },
+    { 
+      icon: Coffee, 
+      title: "Fully Equipped", 
+      desc: "Nespresso, premium toiletries, fluffy robes and everything you need for total comfort." 
+    },
+    { 
+      icon: Wifi, 
+      title: "High-Speed WiFi", 
+      desc: "Stay connected when you want — or simply switch off and embrace the silence." 
+    },
+    { 
+      icon: UtensilsCrossed, 
+      title: "Fully Equipped Kitchen", 
+      desc: "Everything you need to cook your own meals in complete comfort." 
+    },
+  ];
 
   return (
-    <section id="amenities" className="w-full section-padding" style={{ backgroundColor: '#000' }}>
-      <div className="container-narrow">
-        <h2 className="text-4xl md:text-5xl font-serif font-light text-center mb-16" style={{ color: '#c9a961' }}>
-          {t.amenities.title}
+    <section id="amenities" className="w-full py-20" style={{ backgroundColor: "#000" }}>
+      <div className="max-w-7xl mx-auto px-6">
+        <p className="text-xs tracking-widest uppercase text-center mb-4" style={{ color: "#c9a961" }}>
+          Services & Amenities
+        </p>
+        <h2 className="text-5xl font-serif font-light text-center mb-6" style={{ color: "#b8b8b8" }}>
+          Every Detail, <span style={{ color: "#c9a961", fontStyle: "italic" }}>Considered</span>
         </h2>
+        <p className="text-center max-w-3xl mx-auto mb-12" style={{ color: "#a8a8a8" }}>
+          Thoughtfully curated details that elevate your escape — from your private sanctuary to every comfort designed for pure indulgence.
+        </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {t.amenities.items.map((item, index) => {
-            const Icon = amenityIcons[index] || Wind;
+        <div className="grid md:grid-cols-3 gap-6">
+          {amenities.map((item, i) => {
+            const Icon = item.icon;
             return (
-              <div
-                key={index}
-                className="rounded-lg p-6"
-                style={{
-                  backgroundColor: '#000',
-                  border: '1px solid rgba(212, 165, 116, 0.2)',
-                }}
-              >
-                <div className="mb-4 inline-block p-3 rounded-lg" style={{ background: 'linear-gradient(to bottom right, rgba(212, 165, 116, 0.2), rgba(139, 157, 111, 0.2))' }}>
-                  <Icon className="w-6 h-6" style={{ color: '#c9a961' }} />
+              <div key={i} className="rounded p-6" style={{ backgroundColor: "#0a0a0a", border: "1px solid rgba(201, 169, 97, 0.15)" }}>
+                <div className="mb-4 w-10 h-10 rounded flex items-center justify-center" style={{ backgroundColor: "rgba(201, 169, 97, 0.2)" }}>
+                  <Icon size={24} style={{ color: "#c9a961" }} />
                 </div>
-                <h3 className="text-lg font-serif font-light mb-2" style={{ color: '#b8b8b8' }}>
+                <h3 className="text-lg font-serif font-light mb-3" style={{ color: "#b8b8b8" }}>
                   {item.title}
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: '#a8a8a8' }}>
-                  {item.description}
+                <p className="text-sm" style={{ color: "#a8a8a8", lineHeight: "1.6" }}>
+                  {item.desc}
                 </p>
               </div>
             );
