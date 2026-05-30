@@ -1,11 +1,13 @@
 "use client";
 
+import { Trees, Building2, Moon, Sparkles } from "lucide-react";
+
 export function Experience() {
   const cards = [
-    { title: "Forest Immersion", desc: "Nestled deep within an ancient forest, our dome offers complete immersion in nature without sacrificing comfort.", icon: "△" },
-    { title: "Living Architecture", desc: "The dome is crowned with a living moss roof, blending seamlessly into the forest canopy around it.", icon: "🍃" },
-    { title: "Starlit Nights", desc: "Floor-to-ceiling windows frame the forest by day and reveal starry skies by night.", icon: "🌙" },
-    { title: "Boutique Luxury", desc: "Every detail has been carefully curated to create an exclusive sanctuary for discerning travelers.", icon: "✨" }
+    { title: "Forest Immersion", desc: "Nestled deep within an ancient forest, our dome offers complete immersion in nature without sacrificing comfort.", Icon: Trees },
+    { title: "Living Architecture", desc: "The dome is crowned with a living moss roof, blending seamlessly into the forest canopy around it.", Icon: Building2 },
+    { title: "Starlit Nights", desc: "Floor-to-ceiling windows frame the forest by day and reveal starry skies by night.", Icon: Moon },
+    { title: "Boutique Luxury", desc: "Every detail has been carefully curated to create an exclusive sanctuary for discerning travelers.", Icon: Sparkles }
   ];
 
   return (
@@ -23,18 +25,21 @@ export function Experience() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {cards.map((card, i) => (
-            <div key={i} className="text-center" style={{ borderTop: "1px solid rgba(212, 165, 116, 0.2)", paddingTop: "24px" }}>
-              <div 
-                className="w-20 h-20 rounded-full flex items-center justify-center text-3xl mx-auto mb-6"
-                style={{ backgroundColor: "#8b7355", color: "#e8e8e8" }}
-              >
-                {card.icon}
+          {cards.map((card, i) => {
+            const Icon = card.Icon;
+            return (
+              <div key={i} className="text-center" style={{ borderTop: "1px solid rgba(212, 165, 116, 0.2)", paddingTop: "24px" }}>
+                <div 
+                  className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+                  style={{ backgroundColor: "#d4a574" }}
+                >
+                  <Icon size={32} style={{ color: "#1a1a1a" }} />
+                </div>
+                <h3 className="text-base font-serif font-light mb-3" style={{ color: "#e8e8e8" }}>{card.title}</h3>
+                <p className="text-xs" style={{ color: "#a8a8a8", lineHeight: "1.6" }}>{card.desc}</p>
               </div>
-              <h3 className="text-base font-serif font-light mb-3" style={{ color: "#e8e8e8" }}>{card.title}</h3>
-              <p className="text-xs" style={{ color: "#a8a8a8", lineHeight: "1.6" }}>{card.desc}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
