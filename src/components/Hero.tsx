@@ -15,12 +15,12 @@ export function Hero() {
         backgroundImage: "linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('/dome-twin.jpg')",
         backgroundColor: "#000",
         backgroundSize: "110%",
-        backgroundPosition: "center 70%",
+        backgroundPosition: "center 55%",
         backgroundAttachment: "fixed",
       }}
     >
-      {/* Navigation (Floating) */}
-      <nav className="absolute top-0 left-0 right-0 w-full px-6 py-6 z-50">
+      {/* Navigation (Fixed/Sticky) */}
+      <nav className="fixed top-0 left-0 right-0 w-full px-6 py-6 z-50" style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <a href="#" className="font-serif text-2xl tracking-wider" style={{ color: "#d4a574" }}>
             Forêt Dôme
