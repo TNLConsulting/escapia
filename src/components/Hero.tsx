@@ -10,13 +10,14 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20 md:pt-0"
+      className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden pt-20 md:pt-0"
       style={{
         backgroundImage: "linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('/dome-twin.jpg')",
         backgroundColor: "#000",
         backgroundSize: "110%",
         backgroundPosition: "center 85%",
         backgroundAttachment: "auto",
+        backgroundRepeat: "no-repeat",
       }}
     >
       {/* Navigation (Fixed/Sticky) */}
