@@ -1,17 +1,11 @@
 "use client";
 
-import { useLanguage } from "@/contexts/LanguageContext";
-import { translations } from "@/lib/translations";
-
 export function Experience() {
-  const { language } = useLanguage();
-  const t = translations[language];
-
   const cards = [
-    { title: "Forest Immersion", desc: "Nestled deep within an ancient forest, our dome offers complete immersion in nature without sacrificing comfort." },
-    { title: "Living Architecture", desc: "The dome is crowned with a living moss roof, blending seamlessly into the forest canopy around it." },
-    { title: "Starlit Nights", desc: "Floor-to-ceiling windows frame the forest by day and reveal starry skies by night." },
-    { title: "Boutique Luxury", desc: "Every detail has been carefully curated to create an exclusive sanctuary for discerning travelers." }
+    { title: "Forest Immersion", desc: "Nestled deep within an ancient forest, our dome offers complete immersion in nature without sacrificing comfort.", icon: "🌲" },
+    { title: "Living Architecture", desc: "The dome is crowned with a living moss roof, blending seamlessly into the forest canopy around it.", icon: "🏗️" },
+    { title: "Starlit Nights", desc: "Floor-to-ceiling windows frame the forest by day and reveal starry skies by night.", icon: "⭐" },
+    { title: "Boutique Luxury", desc: "Every detail has been carefully curated to create an exclusive sanctuary for discerning travelers.", icon: "✨" }
   ];
 
   return (
@@ -27,10 +21,10 @@ export function Experience() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {cards.map((card, i) => (
-            <div key={i} className="rounded-lg p-8" style={{ backgroundColor: "#0a0a0a", border: "1px solid rgba(212, 165, 116, 0.2)" }}>
-              <div className="w-12 h-12 rounded-lg mb-6 flex items-center justify-center font-serif text-xl" style={{ background: "linear-gradient(135deg, #d4a574, #8b9d6f)", color: "#1a1a1a" }}>{i+1}</div>
-              <h3 className="text-2xl font-serif font-light mb-4" style={{ color: "#e8e8e8" }}>{card.title}</h3>
-              <p style={{ color: "#a8a8a8" }}>{card.desc}</p>
+            <div key={i} className="rounded-lg p-8 transition-all hover:border-opacity-100" style={{ backgroundColor: "#0a0a0a", border: "1px solid rgba(212, 165, 116, 0.15)" }}>
+              <div className="text-4xl mb-6">{card.icon}</div>
+              <h3 className="text-2xl font-serif font-light mb-4" style={{ color: "#d4a574" }}>{card.title}</h3>
+              <p style={{ color: "#a8a8a8", lineHeight: "1.6" }}>{card.desc}</p>
             </div>
           ))}
         </div>
