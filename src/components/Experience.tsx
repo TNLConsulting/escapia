@@ -2,33 +2,37 @@
 
 export function Experience() {
   const cards = [
-    { title: "Forest Immersion", desc: "Nestled deep within an ancient forest, our dome offers complete immersion in nature without sacrificing comfort." },
-    { title: "Living Architecture", desc: "The dome is crowned with a living moss roof, blending seamlessly into the forest canopy around it." },
-    { title: "Starlit Nights", desc: "Floor-to-ceiling windows frame the forest by day and reveal starry skies by night." },
-    { title: "Boutique Luxury", desc: "Every detail has been carefully curated to create an exclusive sanctuary for discerning travelers." }
+    { title: "Forest Immersion", desc: "Nestled deep within an ancient forest, our dome offers complete immersion in nature without sacrificing comfort.", icon: "△" },
+    { title: "Living Architecture", desc: "The dome is crowned with a living moss roof, blending seamlessly into the forest canopy around it.", icon: "🍃" },
+    { title: "Starlit Nights", desc: "Floor-to-ceiling windows frame the forest by day and reveal starry skies by night.", icon: "🌙" },
+    { title: "Boutique Luxury", desc: "Every detail has been carefully curated to create an exclusive sanctuary for discerning travelers.", icon: "✨" }
   ];
 
   return (
     <section id="experience" className="w-full py-20" style={{ backgroundColor: "#1a1a1a" }}>
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <p className="text-xs tracking-widest uppercase text-center mb-3" style={{ color: "#d4a574" }}>The Experience</p>
-        <h2 className="text-4xl md:text-5xl font-serif font-light text-center mb-4" style={{ color: "#e8e8e8" }}>
-          Where Wilderness Meets <br />
-          <span style={{ color: "#d4a574" }}>Refined Living</span>
+        <h2 className="text-4xl md:text-5xl font-serif font-light text-center mb-3" style={{ color: "#e8e8e8" }}>
+          Where Wilderness Meets
         </h2>
-        <p className="text-center max-w-2xl mx-auto mb-12 text-sm" style={{ color: "#a8a8a8" }}>
+        <h2 className="text-4xl md:text-5xl font-serif font-light text-center mb-8" style={{ color: "#d4a574", fontStyle: "italic" }}>
+          Refined Living
+        </h2>
+        <p className="text-center max-w-2xl mx-auto mb-16 text-sm" style={{ color: "#a8a8a8" }}>
           Forêt Dôme is more than accommodation—it's a return to nature, reimagined for those who seek both adventure and elegance.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {cards.map((card, i) => (
-            <div key={i} className="p-6" style={{ backgroundColor: "#0a0a0a", border: "1px solid rgba(212, 165, 116, 0.2)", borderRadius: "8px" }}>
+            <div key={i} className="text-center" style={{ borderTop: "1px solid rgba(212, 165, 116, 0.2)", paddingTop: "24px" }}>
               <div 
-                className="w-8 h-8 rounded mb-4 flex items-center justify-center text-lg"
-                style={{ background: "linear-gradient(135deg, rgba(212, 165, 116, 0.3), rgba(139, 157, 111, 0.3))" }}
-              />
-              <h3 className="text-lg font-serif font-light mb-3" style={{ color: "#e8e8e8" }}>{card.title}</h3>
-              <p className="text-sm" style={{ color: "#a8a8a8", lineHeight: "1.6" }}>{card.desc}</p>
+                className="w-20 h-20 rounded-full flex items-center justify-center text-3xl mx-auto mb-6"
+                style={{ backgroundColor: "#8b7355", color: "#e8e8e8" }}
+              >
+                {card.icon}
+              </div>
+              <h3 className="text-base font-serif font-light mb-3" style={{ color: "#e8e8e8" }}>{card.title}</h3>
+              <p className="text-xs" style={{ color: "#a8a8a8", lineHeight: "1.6" }}>{card.desc}</p>
             </div>
           ))}
         </div>
