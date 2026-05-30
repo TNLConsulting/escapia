@@ -24,11 +24,9 @@ export function Experience() {
           {cards.map((card, i) => (
             <div key={i} className="p-6" style={{ backgroundColor: "#0a0a0a", border: "1px solid rgba(212, 165, 116, 0.2)", borderRadius: "8px" }}>
               <div 
-                className="w-10 h-10 rounded flex items-center justify-center text-lg font-serif font-light mb-4"
-                style={{ background: "linear-gradient(135deg, #d4a574 0%, #8b9d6f 100%)", color: "#1a1a1a" }}
-              >
-                {i + 1}
-              </div>
+                className="w-8 h-8 rounded mb-4"
+                style={{ background: "linear-gradient(135deg, #d4a574 0%, #8b9d6f 100%)" }}
+              />
               <h3 className="text-lg font-serif font-light mb-3" style={{ color: "#e8e8e8" }}>{card.title}</h3>
               <p className="text-sm" style={{ color: "#a8a8a8", lineHeight: "1.6" }}>{card.desc}</p>
             </div>
