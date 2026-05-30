@@ -1,96 +1,86 @@
 "use client";
 
-import { useLanguage } from "@/contexts/LanguageContext";
-import { translations } from "@/lib/translations";
-import { Mail, MapPin } from "lucide-react";
+import { Send, Heart } from "lucide-react";
 
 export function Footer() {
-  const { language } = useLanguage();
-  const t = translations[language];
-
   return (
-    <footer 
-      className="py-16"
-      style={{
-        backgroundColor: '#000',
-        borderTop: '1px solid rgba(212, 165, 116, 0.2)',
-      }}
-    >
-      <div className="container-narrow">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          {/* About */}
+    <footer style={{ backgroundColor: "#0a0a0a", borderTop: "1px solid rgba(157, 126, 68, 0.1)" }}>
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        {/* Top Section */}
+        <div className="grid grid-cols-3 gap-12 mb-16">
+          {/* Left - Brand */}
           <div>
-            <h3 className="text-2xl font-serif font-light mb-4" style={{ color: '#9d7e44' }}>
+            <h3 className="text-2xl font-serif font-light mb-6" style={{ color: "#9d7e44" }}>
               Forêt Dôme
             </h3>
-            <p className="leading-relaxed text-sm" style={{ color: '#a8a8a8' }}>
-              {t.footer.about}
+            <p className="text-sm mb-8" style={{ color: "#666", lineHeight: "1.8" }}>
+              Disconnect to reconnect. An exclusive dome hideaway in nature, designed for two, nestled deep in the Belgian forest in Lille.
             </p>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="text-lg font-serif font-light mb-4" style={{ color: '#b8b8b8' }}>
-              {t.footer.contact}
-            </h4>
-            <div className="space-y-3">
-              <a
-                href={`mailto:${t.footer.email}`}
-                className="flex items-center gap-2 transition-colors duration-300 text-sm hover:opacity-80"
-                style={{ color: '#a8a8a8' }}
-              >
-                <Mail className="w-4 h-4" />
-                {t.footer.email}
+            <div className="flex gap-4">
+              <a href="#" className="transition-colors hover:opacity-80" style={{ color: "#9d7e44" }}>
+                <Send size={20} />
               </a>
-              <a
-                href="https://maps.google.com/?q=Bosuilweg+19,+2275+Lille"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 transition-colors duration-300 text-sm hover:opacity-80"
-                style={{ color: '#a8a8a8' }}
-              >
-                <MapPin className="w-4 h-4" />
-                Bosuilweg 19, Lille
+              <a href="#" className="transition-colors hover:opacity-80" style={{ color: "#9d7e44" }}>
+                <Heart size={20} />
               </a>
             </div>
           </div>
 
-          {/* Links */}
+          {/* Middle - Explore */}
           <div>
-            <h4 className="text-lg font-serif font-light mb-4" style={{ color: '#b8b8b8' }}>
-              Links
+            <h4 className="text-sm font-serif tracking-widest uppercase mb-6" style={{ color: "#9d7e44" }}>
+              Explore
             </h4>
-            <div className="space-y-2">
-              <a
-                href="#"
-                className="block transition-colors duration-300 text-sm hover:opacity-80"
-                style={{ color: '#a8a8a8' }}
-              >
-                {t.footer.links.privacy}
+            <nav className="space-y-3">
+              <a href="#experience" className="block text-sm transition-colors hover:text-opacity-80" style={{ color: "#666" }}>
+                The Experience
               </a>
-              <a
-                href="#"
-                className="block transition-colors duration-300 text-sm hover:opacity-80"
-                style={{ color: '#a8a8a8' }}
-              >
-                {t.footer.links.terms}
+              <a href="#accommodations" className="block text-sm transition-colors hover:text-opacity-80" style={{ color: "#666" }}>
+                The Dome
               </a>
-              <a
-                href="#"
-                className="block transition-colors duration-300 text-sm hover:opacity-80"
-                style={{ color: '#a8a8a8' }}
-              >
-                {t.footer.links.booking}
+              <a href="#amenities" className="block text-sm transition-colors hover:text-opacity-80" style={{ color: "#666" }}>
+                Amenities
               </a>
+              <a href="#location" className="block text-sm transition-colors hover:text-opacity-80" style={{ color: "#666" }}>
+                Location
+              </a>
+              <a href="#booking" className="block text-sm transition-colors hover:text-opacity-80" style={{ color: "#666" }}>
+                Reservations
+              </a>
+            </nav>
+          </div>
+
+          {/* Right - Contact */}
+          <div>
+            <h4 className="text-sm font-serif tracking-widest uppercase mb-6" style={{ color: "#9d7e44" }}>
+              Contact
+            </h4>
+            <div className="space-y-2 text-sm" style={{ color: "#666" }}>
+              <p>
+                <a href="mailto:info@escapia.be" className="transition-colors hover:text-opacity-80">
+                  📧 info@escapia.be
+                </a>
+              </p>
+              <p>Bosuilweg 19</p>
+              <p>2275 Lille, Belgium</p>
             </div>
           </div>
         </div>
 
         {/* Divider */}
-        <div className="pt-8" style={{ borderTop: '1px solid rgba(212, 165, 116, 0.2)' }}>
-          <p className="text-center text-sm" style={{ color: '#a8a8a8' }}>
-            {t.footer.copyright}
-          </p>
+        <div style={{ borderTop: "1px solid rgba(157, 126, 68, 0.1)", margin: "2rem 0" }} />
+
+        {/* Bottom Section */}
+        <div className="flex justify-between items-center text-xs" style={{ color: "#555" }}>
+          <p>© 2026 Forêt Dôme. All rights reserved.</p>
+          <div className="flex gap-6">
+            <a href="#" className="transition-colors hover:text-opacity-80" style={{ color: "#555" }}>
+              Privacy Policy
+            </a>
+            <a href="#" className="transition-colors hover:text-opacity-80" style={{ color: "#555" }}>
+              Terms of Service
+            </a>
+          </div>
         </div>
       </div>
     </footer>
