@@ -54,15 +54,16 @@ export function Accommodations() {
               })}
             </div>
 
-            <button
-              className="px-8 py-3 rounded-lg font-medium transition-all"
+            <a
+              href="#booking"
+              className="inline-block px-8 py-3 rounded-lg font-medium text-center transition-all"
               style={{
                 backgroundColor: "#9d7e44",
                 color: "#1a1a1a",
               }}
             >
               Check Availability
-            </button>
+            </a>
           </div>
         </div>
 
@@ -96,15 +97,16 @@ export function Accommodations() {
               ))}
             </ul>
 
-            <button
-              className="px-8 py-3 rounded-lg font-medium transition-all"
+            <a
+              href="#booking"
+              className="inline-block px-8 py-3 rounded-lg font-medium text-center transition-all"
               style={{
                 backgroundColor: "#9d7e44",
                 color: "#1a1a1a",
               }}
             >
               Reserve Your Escape
-            </button>
+            </a>
           </div>
         </div>
       </div>

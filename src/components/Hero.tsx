@@ -56,12 +56,12 @@ export function Hero() {
           Escape to our exclusive dome sanctuary in Lille, Belgium — an intimate retreat for two, nestled deep in the forest.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="px-8 py-3 rounded-lg font-medium" style={{ backgroundColor: "#9d7e44", color: "#1a1a1a" }}>
+          <a href="#booking" className="inline-block px-8 py-3 rounded-lg font-medium text-center" style={{ backgroundColor: "#9d7e44", color: "#1a1a1a" }}>
             Reserve Your Stay
-          </button>
-          <button className="px-8 py-3 rounded-lg font-medium" style={{ backgroundColor: "#9d7e44", color: "#1a1a1a" }}>
+          </a>
+          <a href="#booking" className="inline-block px-8 py-3 rounded-lg font-medium text-center" style={{ backgroundColor: "#9d7e44", color: "#1a1a1a" }}>
             Discover More
-          </button>
+          </a>
         </div>
       </div>
 
