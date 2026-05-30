@@ -1,148 +1,100 @@
 "use client";
 
-import { useLanguage } from "@/contexts/LanguageContext";
-import { translations } from "@/lib/translations";
 import { MapPin, Train, Plane, Clock } from "lucide-react";
 
 export function Location() {
-  const { language } = useLanguage();
-  const t = translations[language];
-
   return (
-    <section id="location" className="w-full section-padding" style={{ backgroundColor: '#000' }}>
-      <div className="container-narrow">
-        <h2
-          className="text-4xl md:text-5xl font-serif font-light text-center mb-16"
-          style={{ color: '#9d7e44' }}
-        >
-          {t.location.title}
-        </h2>
+    <section id="location" className="w-full py-20" style={{ backgroundColor: "#000" }}>
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-2 gap-12 items-center">
+          {/* Left - Info */}
+          <div>
+            <p className="text-xs tracking-widest uppercase mb-4" style={{ color: "#9d7e44" }}>
+              Location
+            </p>
+            <h2 className="text-5xl font-serif font-light mb-8" style={{ color: "#b8b8b8" }}>
+              Hidden in Plain <span style={{ color: "#9d7e44", fontStyle: "italic" }}>Sight</span>
+            </h2>
+            <p className="mb-12 leading-relaxed" style={{ color: "#a8a8a8", fontSize: "16px" }}>
+              Escapia is nestled within the peaceful surroundings of Lille in Vlaams Gewest, offering the perfect balance of seclusion and accessibility. Just minutes from the city, yet worlds away from the everyday.
+            </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Address & Map */}
-          <div
-            className="space-y-8"
-          >
-            <div 
-            className="rounded-lg p-8"
-            style={{
-              backgroundColor: '#000',
-              border: '1px solid rgba(212, 165, 116, 0.2)',
-            }}
-          >
-              <div className="flex items-start gap-4 mb-6">
-                <MapPin className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#9d7e44' }} />
-                <div>
-                  <h3 className="text-lg font-serif font-light mb-2" style={{ color: '#b8b8b8' }}>
-                    Address
-                  </h3>
-                  <p style={{ color: '#a8a8a8' }}>{t.location.address}</p>
-                </div>
+            {/* Address */}
+            <div className="flex gap-6 mb-8">
+              <div className="mt-1">
+                <MapPin size={24} style={{ color: "#9d7e44" }} />
               </div>
-              <a
-                href={`https://maps.google.com/?q=${encodeURIComponent(t.location.address)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-light hover:opacity-80 transition-opacity"
-                style={{ color: '#9d7e44' }}
-              >
-                Open in Google Maps →
-              </a>
+              <div>
+                <h3 className="text-base font-serif font-light mb-2" style={{ color: "#b8b8b8" }}>
+                  Address
+                </h3>
+                <p style={{ color: "#a8a8a8", fontSize: "15px" }}>
+                  Bosuilweg 19, 2275 Lille<br />
+                  Vlaams Gewest, Belgium
+                </p>
+              </div>
             </div>
 
-            {/* Transportation */}
-            <div className="space-y-4">
-              <h3 className="text-2xl font-serif font-light" style={{ color: '#b8b8b8' }}>
-                {t.location.transportation.title}
-              </h3>
-
-              <div 
-                className="flex items-start gap-4 rounded-lg p-6"
-                style={{
-                  backgroundColor: '#000',
-                  border: '1px solid rgba(212, 165, 116, 0.2)',
-                }}
-              >
-                <Train className="w-6 h-6 flex-shrink-0 mt-0.5" style={{ color: '#9d7e44' }} />
-                <p style={{ color: '#a8a8a8' }}>{t.location.transportation.train}</p>
+            {/* By Train */}
+            <div className="flex gap-6 mb-8">
+              <div className="mt-1">
+                <Train size={24} style={{ color: "#9d7e44" }} />
               </div>
+              <div>
+                <h3 className="text-base font-serif font-light mb-2" style={{ color: "#b8b8b8" }}>
+                  By Train
+                </h3>
+                <p style={{ color: "#a8a8a8", fontSize: "15px" }}>
+                  Antwerpen-Centraal station: 30 minutes by car<br />
+                  Complimentary pickup available
+                </p>
+              </div>
+            </div>
 
-              <div 
-                className="flex items-start gap-4 rounded-lg p-6"
-                style={{
-                  backgroundColor: '#000',
-                  border: '1px solid rgba(212, 165, 116, 0.2)',
-                }}
-              >
-                <Plane className="w-6 h-6 flex-shrink-0 mt-0.5" style={{ color: '#9d7e44' }} />
-                <p style={{ color: '#a8a8a8' }}>{t.location.transportation.air}</p>
+            {/* By Air */}
+            <div className="flex gap-6 mb-8">
+              <div className="mt-1">
+                <Plane size={24} style={{ color: "#9d7e44" }} />
+              </div>
+              <div>
+                <h3 className="text-base font-serif font-light mb-2" style={{ color: "#b8b8b8" }}>
+                  By Air
+                </h3>
+                <p style={{ color: "#a8a8a8", fontSize: "15px" }}>
+                  Antwerp Airport (ANR): 25 minutes<br />
+                  Brussels Airport (BRU): 45 minutes
+                </p>
+              </div>
+            </div>
+
+            {/* Check-in Times */}
+            <div className="flex gap-6">
+              <div className="mt-1">
+                <Clock size={24} style={{ color: "#9d7e44" }} />
+              </div>
+              <div>
+                <h3 className="text-base font-serif font-light mb-2" style={{ color: "#b8b8b8" }}>
+                  Check-in Times
+                </h3>
+                <p style={{ color: "#a8a8a8", fontSize: "15px" }}>
+                  Check-in: 15:00 | Check-out: 11:00<br />
+                  Early/late options available on request
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Check-in Times */}
-          <div
-            className="space-y-8"
-          >
-            <div 
-              className="rounded-lg p-8"
-              style={{
-                backgroundColor: '#000',
-                border: '1px solid rgba(212, 165, 116, 0.2)',
-              }}
-            >
-              <h3 className="text-2xl font-serif font-light mb-6" style={{ color: '#b8b8b8' }}>
-                {t.location.checkInTimes.title}
-              </h3>
-
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <Clock className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#9d7e44' }} />
-                  <div>
-                    <p className="text-sm font-light" style={{ color: '#a8a8a8' }}>
-                      Check-in
-                    </p>
-                    <p className="font-light" style={{ color: '#b8b8b8' }}>
-                      {t.location.checkInTimes.checkIn}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <Clock className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#9d7e44' }} />
-                  <div>
-                    <p className="text-sm font-light" style={{ color: '#a8a8a8' }}>
-                      Check-out
-                    </p>
-                    <p className="font-light" style={{ color: '#b8b8b8' }}>
-                      {t.location.checkInTimes.checkOut}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-sm leading-relaxed mt-6 pt-6" style={{
-                color: '#a8a8a8',
-                borderTop: '1px solid rgba(212, 165, 116, 0.2)',
-              }}>
-                {t.location.checkInTimes.earlyLate}
-              </p>
-            </div>
-
-            {/* Map Placeholder */}
-            <div 
-              className="rounded-lg h-64 flex items-center justify-center"
-              style={{
-                background: 'linear-gradient(to bottom right, rgba(212, 165, 116, 0.1), rgba(139, 157, 111, 0.1))',
-                border: '1px solid rgba(212, 165, 116, 0.2)',
-              }}
-            >
-              <div className="text-center">
-                <MapPin className="w-12 h-12 mx-auto mb-4" style={{ color: 'rgba(212, 165, 116, 0.3)' }} />
-                <p className="text-sm" style={{ color: '#a8a8a8' }}>Bosuilweg 19</p>
-                <p className="text-xs mt-2" style={{ color: '#a8a8a8' }}>2275 Lille, Belgium</p>
-              </div>
-            </div>
+          {/* Right - Map */}
+          <div className="rounded-lg overflow-hidden h-96">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2512.123456789!2d4.566789!3d51.2345678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f1234567%3A0x1234567890abcdef!2sBosuilweg%2019%2C%202275%20Lille!5e0!3m2!1sen!2sbe!4v1234567890"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </div>
