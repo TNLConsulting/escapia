@@ -13,7 +13,7 @@ export function Location() {
       <div className="container-narrow">
         <h2
           className="text-4xl md:text-5xl font-serif font-light text-center mb-16"
-          style={{ color: '#c9a961' }}
+          style={{ color: '#9d7e44' }}
         >
           {t.location.title}
         </h2>
@@ -31,7 +31,7 @@ export function Location() {
             }}
           >
               <div className="flex items-start gap-4 mb-6">
-                <MapPin className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#c9a961' }} />
+                <MapPin className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#9d7e44' }} />
                 <div>
                   <h3 className="text-lg font-serif font-light mb-2" style={{ color: '#b8b8b8' }}>
                     Address
@@ -44,7 +44,7 @@ export function Location() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-light hover:opacity-80 transition-opacity"
-                style={{ color: '#c9a961' }}
+                style={{ color: '#9d7e44' }}
               >
                 Open in Google Maps →
               </a>
@@ -63,7 +63,7 @@ export function Location() {
                   border: '1px solid rgba(212, 165, 116, 0.2)',
                 }}
               >
-                <Train className="w-6 h-6 flex-shrink-0 mt-0.5" style={{ color: '#c9a961' }} />
+                <Train className="w-6 h-6 flex-shrink-0 mt-0.5" style={{ color: '#9d7e44' }} />
                 <p style={{ color: '#a8a8a8' }}>{t.location.transportation.train}</p>
               </div>
 
@@ -74,7 +74,7 @@ export function Location() {
                   border: '1px solid rgba(212, 165, 116, 0.2)',
                 }}
               >
-                <Plane className="w-6 h-6 flex-shrink-0 mt-0.5" style={{ color: '#c9a961' }} />
+                <Plane className="w-6 h-6 flex-shrink-0 mt-0.5" style={{ color: '#9d7e44' }} />
                 <p style={{ color: '#a8a8a8' }}>{t.location.transportation.air}</p>
               </div>
             </div>
@@ -97,7 +97,7 @@ export function Location() {
 
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <Clock className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#c9a961' }} />
+                  <Clock className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#9d7e44' }} />
                   <div>
                     <p className="text-sm font-light" style={{ color: '#a8a8a8' }}>
                       Check-in
@@ -109,7 +109,7 @@ export function Location() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Clock className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#c9a961' }} />
+                  <Clock className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#9d7e44' }} />
                   <div>
                     <p className="text-sm font-light" style={{ color: '#a8a8a8' }}>
                       Check-out

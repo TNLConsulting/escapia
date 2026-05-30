@@ -2,7 +2,7 @@
 
 @layer base {
   :root {
-    --primary: #c9a961;
+    --primary: #9d7e44;
     --moss: #8b9d6f;
     --dark: #1a1a1a;
     --light: #f5f5f5;
@@ -56,7 +56,7 @@
   }
 
   .gradient-primary {
-    background: linear-gradient(135deg, #c9a961 0%, #8b9d6f 100%);
+    background: linear-gradient(135deg, #9d7e44 0%, #8b9d6f 100%);
   }
 
   .section-padding {
@@ -79,7 +79,7 @@
     padding-bottom: 0.75rem;
     border-radius: 0.5rem;
     font-weight: 500;
-    background-color: #c9a961;
+    background-color: #9d7e44;
     color: rgb(26, 26, 26);
     transition-property: all;
     transition-duration: 300ms;
@@ -98,14 +98,14 @@
     padding-bottom: 0.75rem;
     border-radius: 0.5rem;
     font-weight: 500;
-    border: 2px solid #c9a961;
-    color: #c9a961;
+    border: 2px solid #9d7e44;
+    color: #9d7e44;
     transition-property: all;
     transition-duration: 300ms;
   }
 
   .button-secondary:hover {
-    background-color: #c9a961;
+    background-color: #9d7e44;
     color: rgb(26, 26, 26);
   }
 }

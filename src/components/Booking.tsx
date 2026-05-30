@@ -62,7 +62,7 @@ export function Booking() {
       <div className="container-narrow">
         <h2
           className="text-4xl md:text-5xl font-serif font-light text-center mb-16"
-          style={{ color: '#c9a961' }}
+          style={{ color: '#9d7e44' }}
         >
           {t.booking.title}
         </h2>
@@ -89,7 +89,7 @@ export function Booking() {
                   color: '#b8b8b8',
                 }}
                 onFocus={(e) => {
-                  e.currentTarget.style.borderColor = '#c9a961';
+                  e.currentTarget.style.borderColor = '#9d7e44';
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(212, 165, 116, 0.2)';
@@ -116,7 +116,7 @@ export function Booking() {
                   color: '#b8b8b8',
                 }}
                 onFocus={(e) => {
-                  e.currentTarget.style.borderColor = '#c9a961';
+                  e.currentTarget.style.borderColor = '#9d7e44';
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(212, 165, 116, 0.2)';
@@ -143,7 +143,7 @@ export function Booking() {
                   color: '#b8b8b8',
                 }}
                 onFocus={(e) => {
-                  e.currentTarget.style.borderColor = '#c9a961';
+                  e.currentTarget.style.borderColor = '#9d7e44';
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(212, 165, 116, 0.2)';
@@ -168,7 +168,7 @@ export function Booking() {
                   color: '#b8b8b8',
                 }}
                 onFocus={(e) => {
-                  e.currentTarget.style.borderColor = '#c9a961';
+                  e.currentTarget.style.borderColor = '#9d7e44';
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(212, 165, 116, 0.2)';
@@ -199,7 +199,7 @@ export function Booking() {
                     color: '#b8b8b8',
                   }}
                   onFocus={(e) => {
-                    e.currentTarget.style.borderColor = '#c9a961';
+                    e.currentTarget.style.borderColor = '#9d7e44';
                   }}
                   onBlur={(e) => {
                     e.currentTarget.style.borderColor = 'rgba(212, 165, 116, 0.2)';
@@ -223,7 +223,7 @@ export function Booking() {
                     color: '#b8b8b8',
                   }}
                   onFocus={(e) => {
-                    e.currentTarget.style.borderColor = '#c9a961';
+                    e.currentTarget.style.borderColor = '#9d7e44';
                   }}
                   onBlur={(e) => {
                     e.currentTarget.style.borderColor = 'rgba(212, 165, 116, 0.2)';
@@ -251,7 +251,7 @@ export function Booking() {
                   color: '#b8b8b8',
                 }}
                 onFocus={(e) => {
-                  e.currentTarget.style.borderColor = '#c9a961';
+                  e.currentTarget.style.borderColor = '#9d7e44';
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(212, 165, 116, 0.2)';

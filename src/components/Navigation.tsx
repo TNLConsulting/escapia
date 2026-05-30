@@ -20,7 +20,7 @@ export function Navigation() {
       <div className="container-narrow flex justify-between items-center h-20">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <h1 className="text-2xl font-serif font-light" style={{ color: '#c9a961' }}>
+          <h1 className="text-2xl font-serif font-light" style={{ color: '#9d7e44' }}>
             Forêt Dôme
           </h1>
         </div>
@@ -70,7 +70,7 @@ export function Navigation() {
               onClick={() => setLanguage("en")}
               className="px-3 py-1 text-sm font-medium transition-colors duration-300"
               style={{
-                backgroundColor: language === "en" ? '#c9a961' : 'transparent',
+                backgroundColor: language === "en" ? '#9d7e44' : 'transparent',
                 color: language === "en" ? '#1a1a1a' : '#b8b8b8',
               }}
             >
@@ -80,7 +80,7 @@ export function Navigation() {
               onClick={() => setLanguage("nl")}
               className="px-3 py-1 text-sm font-medium transition-colors duration-300"
               style={{
-                backgroundColor: language === "nl" ? '#c9a961' : 'transparent',
+                backgroundColor: language === "nl" ? '#9d7e44' : 'transparent',
                 color: language === "nl" ? '#1a1a1a' : '#b8b8b8',
               }}
             >
