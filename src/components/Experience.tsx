@@ -2,10 +2,10 @@
 
 export function Experience() {
   const cards = [
-    { title: "Forest Immersion", desc: "Nestled deep within an ancient forest, our dome offers complete immersion in nature without sacrificing comfort." },
-    { title: "Living Architecture", desc: "The dome is crowned with a living moss roof, blending seamlessly into the forest canopy around it." },
-    { title: "Starlit Nights", desc: "Floor-to-ceiling windows frame the forest by day and reveal starry skies by night." },
-    { title: "Boutique Luxury", desc: "Every detail has been carefully curated to create an exclusive sanctuary for discerning travelers." }
+    { title: "Forest Immersion", desc: "Nestled deep within an ancient forest, our dome offers complete immersion in nature without sacrificing comfort.", icon: "🌲" },
+    { title: "Living Architecture", desc: "The dome is crowned with a living moss roof, blending seamlessly into the forest canopy around it.", icon: "🏛️" },
+    { title: "Starlit Nights", desc: "Floor-to-ceiling windows frame the forest by day and reveal starry skies by night.", icon: "✨" },
+    { title: "Boutique Luxury", desc: "Every detail has been carefully curated to create an exclusive sanctuary for discerning travelers.", icon: "💎" }
   ];
 
   return (
@@ -23,10 +23,7 @@ export function Experience() {
         <div className="grid md:grid-cols-2 gap-6">
           {cards.map((card, i) => (
             <div key={i} className="p-6" style={{ backgroundColor: "#0a0a0a", border: "1px solid rgba(212, 165, 116, 0.2)", borderRadius: "8px" }}>
-              <div 
-                className="w-8 h-8 rounded mb-4"
-                style={{ background: "linear-gradient(135deg, #d4a574 0%, #8b9d6f 100%)" }}
-              />
+              <div className="text-2xl mb-4">{card.icon}</div>
               <h3 className="text-lg font-serif font-light mb-3" style={{ color: "#e8e8e8" }}>{card.title}</h3>
               <p className="text-sm" style={{ color: "#a8a8a8", lineHeight: "1.6" }}>{card.desc}</p>
             </div>
