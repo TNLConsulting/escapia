@@ -10,11 +10,11 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full h-screen flex flex-col items-center justify-center"
+      className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden"
       style={{
         backgroundImage: "linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('/dome-twin.jpg')",
-        backgroundColor: "#1a1a1a",
-        backgroundSize: "cover",
+        backgroundColor: "#000",
+        backgroundSize: "120%",
         backgroundPosition: "center 70%",
       }}
     >

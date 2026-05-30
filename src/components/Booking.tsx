@@ -58,7 +58,7 @@ export function Booking() {
   };
 
   return (
-    <section id="booking" className="w-full section-padding" style={{ backgroundColor: '#1a1a1a' }}>
+    <section id="booking" className="w-full section-padding" style={{ backgroundColor: '#000' }}>
       <div className="container-narrow">
         <h2
           className="text-4xl md:text-5xl font-serif font-light text-center mb-16"
@@ -84,7 +84,7 @@ export function Booking() {
                 onChange={handleChange}
                 className="w-full rounded-lg px-4 py-3 transition-colors duration-300"
                 style={{
-                  backgroundColor: '#1a1a1a',
+                  backgroundColor: '#000',
                   border: '1px solid rgba(212, 165, 116, 0.2)',
                   color: '#e8e8e8',
                 }}
@@ -111,7 +111,7 @@ export function Booking() {
                 onChange={handleChange}
                 className="w-full rounded-lg px-4 py-3 transition-colors duration-300"
                 style={{
-                  backgroundColor: '#1a1a1a',
+                  backgroundColor: '#000',
                   border: '1px solid rgba(212, 165, 116, 0.2)',
                   color: '#e8e8e8',
                 }}
@@ -138,7 +138,7 @@ export function Booking() {
                 onChange={handleChange}
                 className="w-full rounded-lg px-4 py-3 transition-colors duration-300"
                 style={{
-                  backgroundColor: '#1a1a1a',
+                  backgroundColor: '#000',
                   border: '1px solid rgba(212, 165, 116, 0.2)',
                   color: '#e8e8e8',
                 }}
@@ -163,7 +163,7 @@ export function Booking() {
                 onChange={handleChange}
                 className="w-full rounded-lg px-4 py-3 transition-colors duration-300"
                 style={{
-                  backgroundColor: '#1a1a1a',
+                  backgroundColor: '#000',
                   border: '1px solid rgba(212, 165, 116, 0.2)',
                   color: '#e8e8e8',
                 }}
@@ -194,7 +194,7 @@ export function Booking() {
                   onChange={handleChange}
                   className="w-full rounded-lg px-4 py-3 transition-colors duration-300"
                   style={{
-                    backgroundColor: '#1a1a1a',
+                    backgroundColor: '#000',
                     border: '1px solid rgba(212, 165, 116, 0.2)',
                     color: '#e8e8e8',
                   }}
@@ -218,7 +218,7 @@ export function Booking() {
                   onChange={handleChange}
                   className="w-full rounded-lg px-4 py-3 transition-colors duration-300"
                   style={{
-                    backgroundColor: '#1a1a1a',
+                    backgroundColor: '#000',
                     border: '1px solid rgba(212, 165, 116, 0.2)',
                     color: '#e8e8e8',
                   }}
@@ -246,7 +246,7 @@ export function Booking() {
                 rows={4}
                 className="w-full rounded-lg px-4 py-3 transition-colors duration-300 resize-none"
                 style={{
-                  backgroundColor: '#1a1a1a',
+                  backgroundColor: '#000',
                   border: '1px solid rgba(212, 165, 116, 0.2)',
                   color: '#e8e8e8',
                 }}

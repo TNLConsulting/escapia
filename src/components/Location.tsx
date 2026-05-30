@@ -9,7 +9,7 @@ export function Location() {
   const t = translations[language];
 
   return (
-    <section id="location" className="w-full section-padding" style={{ backgroundColor: '#1a1a1a' }}>
+    <section id="location" className="w-full section-padding" style={{ backgroundColor: '#000' }}>
       <div className="container-narrow">
         <h2
           className="text-4xl md:text-5xl font-serif font-light text-center mb-16"
@@ -26,7 +26,7 @@ export function Location() {
             <div 
             className="rounded-lg p-8"
             style={{
-              backgroundColor: '#1a1a1a',
+              backgroundColor: '#000',
               border: '1px solid rgba(212, 165, 116, 0.2)',
             }}
           >
@@ -59,7 +59,7 @@ export function Location() {
               <div 
                 className="flex items-start gap-4 rounded-lg p-6"
                 style={{
-                  backgroundColor: '#1a1a1a',
+                  backgroundColor: '#000',
                   border: '1px solid rgba(212, 165, 116, 0.2)',
                 }}
               >
@@ -70,7 +70,7 @@ export function Location() {
               <div 
                 className="flex items-start gap-4 rounded-lg p-6"
                 style={{
-                  backgroundColor: '#1a1a1a',
+                  backgroundColor: '#000',
                   border: '1px solid rgba(212, 165, 116, 0.2)',
                 }}
               >
@@ -87,7 +87,7 @@ export function Location() {
             <div 
               className="rounded-lg p-8"
               style={{
-                backgroundColor: '#1a1a1a',
+                backgroundColor: '#000',
                 border: '1px solid rgba(212, 165, 116, 0.2)',
               }}
             >

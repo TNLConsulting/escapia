@@ -12,7 +12,7 @@ export function Footer() {
     <footer 
       className="py-16"
       style={{
-        backgroundColor: '#1a1a1a',
+        backgroundColor: '#000',
         borderTop: '1px solid rgba(212, 165, 116, 0.2)',
       }}
     >
