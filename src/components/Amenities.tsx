@@ -23,7 +23,7 @@ export function Amenities() {
   return (
     <section id="amenities" className="w-full section-padding" style={{ backgroundColor: '#000' }}>
       <div className="container-narrow">
-        <h2 className="text-4xl md:text-5xl font-serif font-light text-center mb-16" style={{ color: '#f0c885' }}>
+        <h2 className="text-4xl md:text-5xl font-serif font-light text-center mb-16" style={{ color: '#c9a961' }}>
           {t.amenities.title}
         </h2>
 
@@ -40,7 +40,7 @@ export function Amenities() {
                 }}
               >
                 <div className="mb-4 inline-block p-3 rounded-lg" style={{ background: 'linear-gradient(to bottom right, rgba(212, 165, 116, 0.2), rgba(139, 157, 111, 0.2))' }}>
-                  <Icon className="w-6 h-6" style={{ color: '#f0c885' }} />
+                  <Icon className="w-6 h-6" style={{ color: '#c9a961' }} />
                 </div>
                 <h3 className="text-lg font-serif font-light mb-2" style={{ color: '#b8b8b8' }}>
                   {item.title}

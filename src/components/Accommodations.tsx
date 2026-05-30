@@ -15,9 +15,9 @@ export function Accommodations() {
   return (
     <section id="accommodations" className="w-full py-20" style={{ background: "linear-gradient(to bottom, #0a1a0f, #000)" }}>
       <div className="max-w-7xl mx-auto px-6">
-        <p className="text-sm tracking-widest uppercase text-center mb-2" style={{ color: "#f0c885" }}>Your Sanctuary</p>
+        <p className="text-sm tracking-widest uppercase text-center mb-2" style={{ color: "#c9a961" }}>Your Sanctuary</p>
         <h2 className="text-5xl font-serif font-light text-center mb-6" style={{ color: "#b8b8b8" }}>
-          The <span style={{ color: "#f0c885" }}>Dome</span>
+          The <span style={{ color: "#c9a961" }}>Dome</span>
         </h2>
         <p className="text-center max-w-3xl mx-auto mb-12" style={{ color: "#a8a8a8" }}>
           Two connected domes create one intimate sanctuary — a living space and sleeping retreat<br />
@@ -46,7 +46,7 @@ export function Accommodations() {
                 return (
                   <div key={i} className="text-center">
                     <div className="mb-3 flex justify-center">
-                      <Icon size={28} style={{ color: "#f0c885" }} />
+                      <Icon size={28} style={{ color: "#c9a961" }} />
                     </div>
                     <p className="text-xs" style={{ color: "#a8a8a8" }}>{spec.label}</p>
                   </div>
@@ -55,10 +55,10 @@ export function Accommodations() {
             </div>
 
             <button
-              className="px-8 py-3 rounded-lg font-medium border-2 transition-all"
+              className="px-8 py-3 rounded-lg font-medium transition-all"
               style={{
-                borderColor: "#f0c885",
-                color: "#f0c885",
+                backgroundColor: "#c9a961",
+                color: "#1a1a1a",
               }}
             >
               Check Availability
@@ -90,7 +90,7 @@ export function Accommodations() {
                 "Living moss roof that breathes with nature"
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-4 text-sm" style={{ color: "#a8a8a8" }}>
-                  <span style={{ color: "#f0c885", marginTop: "4px" }}>●</span>
+                  <span style={{ color: "#c9a961", marginTop: "4px" }}>●</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -99,7 +99,7 @@ export function Accommodations() {
             <button
               className="px-8 py-3 rounded-lg font-medium transition-all"
               style={{
-                backgroundColor: "#f0c885",
+                backgroundColor: "#c9a961",
                 color: "#1a1a1a",
               }}
             >

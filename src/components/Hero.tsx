@@ -22,7 +22,7 @@ export function Hero() {
       {/* Navigation (Fixed/Sticky) */}
       <nav className="fixed top-0 left-0 right-0 w-full px-6 py-6 z-50">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <a href="#" className="font-serif text-2xl tracking-wider" style={{ color: "#f0c885" }}>
+          <a href="#" className="font-serif text-2xl tracking-wider" style={{ color: "#c9a961" }}>
             Forêt Dôme
           </a>
 
@@ -35,11 +35,11 @@ export function Hero() {
 
           <div className="flex items-center gap-4">
             <div className="flex gap-1 text-xs tracking-widest">
-              <button onClick={() => setLanguage("en")} style={{ color: language === "en" ? "#f0c885" : "#a8a8a8" }}>EN</button>
+              <button onClick={() => setLanguage("en")} style={{ color: language === "en" ? "#c9a961" : "#a8a8a8" }}>EN</button>
               <span style={{ color: "#a8a8a8" }}>|</span>
-              <button onClick={() => setLanguage("nl")} style={{ color: language === "nl" ? "#f0c885" : "#a8a8a8" }}>NL</button>
+              <button onClick={() => setLanguage("nl")} style={{ color: language === "nl" ? "#c9a961" : "#a8a8a8" }}>NL</button>
             </div>
-            <button className="hidden sm:block px-6 py-2 rounded-lg text-sm font-medium" style={{ backgroundColor: "#f0c885", color: "#1a1a1a" }}>
+            <button className="hidden sm:block px-6 py-2 rounded-lg text-sm font-medium" style={{ backgroundColor: "#c9a961", color: "#1a1a1a" }}>
               Book Your Escape
             </button>
           </div>
@@ -48,18 +48,18 @@ export function Hero() {
 
       {/* Content */}
       <div className="text-center max-w-3xl mx-auto px-6">
-        <p className="text-sm tracking-widest uppercase mb-6" style={{ color: "#f0c885" }}>A hideaway in nature</p>
+        <p className="text-sm tracking-widest uppercase mb-6" style={{ color: "#c9a961" }}>A hideaway in nature</p>
         <h1 className="font-serif text-6xl md:text-7xl font-light leading-tight mb-8" style={{ color: "#b8b8b8" }}>
-          Disconnect to <span style={{ color: "#f0c885", fontStyle: "italic" }}>Reconnect</span>
+          Disconnect to <span style={{ color: "#c9a961", fontStyle: "italic" }}>Reconnect</span>
         </h1>
         <p className="text-lg md:text-xl mb-10" style={{ color: "#a8a8a8" }}>
           Escape to our exclusive dome sanctuary in Lille, Belgium — an intimate retreat for two, nestled deep in the forest.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="px-8 py-3 rounded-lg font-medium" style={{ backgroundColor: "#f0c885", color: "#1a1a1a" }}>
+          <button className="px-8 py-3 rounded-lg font-medium" style={{ backgroundColor: "#c9a961", color: "#1a1a1a" }}>
             Reserve Your Stay
           </button>
-          <button className="px-8 py-3 rounded-lg font-medium border-2" style={{ borderColor: "#f0c885", color: "#f0c885" }}>
+          <button className="px-8 py-3 rounded-lg font-medium" style={{ backgroundColor: "#c9a961", color: "#1a1a1a" }}>
             Discover More
           </button>
         </div>
@@ -68,7 +68,7 @@ export function Hero() {
       {/* Scroll */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-center">
         <p className="text-xs tracking-widest uppercase mb-2" style={{ color: "#a8a8a8" }}>Scroll</p>
-        <div className="animate-bounce" style={{ color: "#f0c885" }}>↓</div>
+        <div className="animate-bounce" style={{ color: "#c9a961" }}>↓</div>
       </div>
     </section>
   );

@@ -20,7 +20,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* About */}
           <div>
-            <h3 className="text-2xl font-serif font-light mb-4" style={{ color: '#f0c885' }}>
+            <h3 className="text-2xl font-serif font-light mb-4" style={{ color: '#c9a961' }}>
               Forêt Dôme
             </h3>
             <p className="leading-relaxed text-sm" style={{ color: '#a8a8a8' }}>
