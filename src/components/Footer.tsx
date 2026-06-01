@@ -17,11 +17,8 @@ export function Footer() {
               Disconnect to reconnect. An exclusive dome hideaway in nature, designed for two, nestled deep in the Belgian forest in Lille.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="transition-colors hover:opacity-80" style={{ color: "#9d7e44" }}>
+              <a href="https://www.instagram.com/escapia.be/" target="_blank" rel="noopener noreferrer" className="transition-colors hover:opacity-80" style={{ color: "#9d7e44" }}>
                 <Send size={20} />
-              </a>
-              <a href="#" className="transition-colors hover:opacity-80" style={{ color: "#9d7e44" }}>
-                <Heart size={20} />
               </a>
             </div>
           </div>
@@ -72,12 +69,12 @@ export function Footer() {
 
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 md:gap-4 text-xs" style={{ color: "#555" }}>
-          <p className="text-xs">© 2026 Forêt Dôme. All rights reserved.</p>
+          <p className="text-xs">© 2026 Escapia. All rights reserved.</p>
           <div className="flex gap-4 md:gap-6 text-xs">
-            <a href="#" className="transition-colors hover:text-opacity-80" style={{ color: "#555" }}>
+            <a href="/privacy" className="transition-colors hover:text-opacity-80" style={{ color: "#555" }}>
               Privacy Policy
             </a>
-            <a href="#" className="transition-colors hover:text-opacity-80" style={{ color: "#555" }}>
+            <a href="/terms" className="transition-colors hover:text-opacity-80" style={{ color: "#555" }}>
               Terms of Service
             </a>
           </div>

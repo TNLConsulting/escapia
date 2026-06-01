@@ -87,7 +87,7 @@ export function Location() {
           {/* Right - Map */}
           <div className="rounded-lg overflow-hidden h-64 md:h-96">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2512.123456789!2d4.566789!3d51.2345678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f1234567%3A0x1234567890abcdef!2sBosuilweg%2019%2C%202275%20Lille!5e0!3m2!1sen!2sbe!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2514.7632654!2d4.565123!3d51.232945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f3a8f3a8f3a9%3A0x1b5c5c5c5c5c5c5c!2sBosuilweg%2019%2C%202275%20Lille%2C%20Belgium!5e0!3m2!1sen!2sbe!4v1717349400000"
               width="100%"
               height="100%"
               style={{ border: 0 }}

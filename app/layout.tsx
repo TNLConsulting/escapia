@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Escapia - Disconnect to Reconnect | Bio-Integrated Forest Dome",
+  title: "Forêt Dôme | Escapia",
   description:
     "Immerse yourself in nature within our bio-integrated forest dome. A unique luxury retreat where you can disconnect and reconnect with yourself.",
   keywords:
     "forest dome, glamping, eco-luxury, retreat, Belgium, nature, wellness",
   openGraph: {
-    title: "Escapia - Disconnect to Reconnect",
+    title: "Forêt Dôme by Escapia",
     description:
       "A bio-integrated forest dome offering the perfect balance between nature and luxury.",
     url: "https://escapia.be",
