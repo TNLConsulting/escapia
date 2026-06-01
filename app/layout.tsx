@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import "./globals.css";
@@ -65,6 +66,10 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col">
         <LanguageProvider>{children}</LanguageProvider>
+        <Script 
+          src="https://cdn.lodgify.com/widgets/search-bar/latest/widget.js" 
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );

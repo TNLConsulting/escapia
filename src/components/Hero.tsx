@@ -2,14 +2,10 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
-import { useLodgifyScript } from "@/hooks/useLodgifyScript";
 
 export function Hero() {
   const { language, setLanguage } = useLanguage();
   const t = translations[language];
-  
-  // Load Lodgify script
-  useLodgifyScript();
 
   return (
     <section
