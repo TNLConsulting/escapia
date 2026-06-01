@@ -67,8 +67,8 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <LanguageProvider>{children}</LanguageProvider>
         <Script 
-          src="https://cdn.lodgify.com/widgets/search-bar/latest/widget.js" 
-          strategy="lazyOnload"
+          src="https://app.lodgify.com/portable-search-bar/stable/renderPortableSearchBar.js" 
+          defer
         />
       </body>
     </html>
