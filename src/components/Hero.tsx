@@ -2,10 +2,14 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
+import { useLodgifyScript } from "@/hooks/useLodgifyScript";
 
 export function Hero() {
   const { language, setLanguage } = useLanguage();
   const t = translations[language];
+  
+  // Load Lodgify script
+  useLodgifyScript();
 
   return (
     <section
@@ -51,13 +55,42 @@ export function Hero() {
         <p className="text-base md:text-xl mb-8 md:mb-10" style={{ color: "#a8a8a8" }}>
           Escape to our exclusive dome sanctuary in Lille, Belgium — an intimate retreat for two, nestled deep in the forest.
         </p>
-        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-          <a href="#booking" className="inline-block px-6 md:px-8 py-2 md:py-3 rounded-lg font-medium text-center text-sm md:text-base" style={{ backgroundColor: "#9d7e44", color: "#1a1a1a" }}>
-            Reserve Your Stay
-          </a>
-          <a href="#booking" className="inline-block px-6 md:px-8 py-2 md:py-3 rounded-lg font-medium text-center text-sm md:text-base" style={{ backgroundColor: "#9d7e44", color: "#1a1a1a" }}>
-            Discover More
-          </a>
+        {/* 
+          Lodgify Search Widget - replaces "Reserve Your Stay" and "Discover More" buttons
+          Widget ID: lodgify-search-bar
+          Website ID: 656411
+          The widget will be initialized by the Lodgify script loaded in useLodgifyScript hook
+        */}
+        <div className="w-full flex justify-center">
+          <div
+            id="lodgify-search-bar"
+            data-website-id="656411"
+            data-language-code="en"
+            data-checkout-page-url="https://checkout.lodgify.com/tom-schallenbergh/en/#/809815"
+            data-dates-check-in-label="Check-in"
+            data-dates-check-out-label="Check-out"
+            data-guests-counter-label="Guests"
+            data-guests-input-singular-label="{{NumberOfGuests}} guest"
+            data-guests-input-plural-label="{{NumberOfGuests}} guests"
+            data-location-input-label="Location"
+            data-search-button-label="Search"
+            data-dates-input-min-stay-tooltip-text='{"one":"Minimum {minStay} night","other":"Minimum {minStay} nights"}'
+            data-guests-breakdown-label="Guests"
+            data-adults-label='{"one":"adult","other":"adults"}'
+            data-adults-description="Ages {minAge} or above"
+            data-children-label='{"one":"child","other":"children"}'
+            data-children-description="Ages {minAge}-{maxAge}"
+            data-children-not-allowed-label="Not suitable for children"
+            data-infants-label='{"one":"infant","other":"infants"}'
+            data-infants-description="Under {maxAge}"
+            data-infants-not-allowed-label="Not suitable for infants"
+            data-pets-label='{"one":"pet","other":"pets"}'
+            data-pets-not-allowed-label="Not allowed"
+            data-done-label="Done"
+            data-new-tab="true"
+            data-version="stable"
+            data-has-guests-breakdown
+          />
         </div>
       </div>
 
