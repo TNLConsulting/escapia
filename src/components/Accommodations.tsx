@@ -55,7 +55,7 @@ export function Accommodations() {
             </div>
 
             <a
-              href="#booking"
+              href="#hero"
               className="inline-block px-8 py-3 rounded-lg font-medium text-center transition-all"
               style={{
                 backgroundColor: "#9d7e44",
@@ -98,7 +98,7 @@ export function Accommodations() {
             </ul>
 
             <a
-              href="#booking"
+              href="#hero"
               className="inline-block px-8 py-3 rounded-lg font-medium text-center transition-all"
               style={{
                 backgroundColor: "#9d7e44",

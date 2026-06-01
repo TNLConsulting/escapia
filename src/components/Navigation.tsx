@@ -89,7 +89,7 @@ export function Navigation() {
           </div>
 
           {/* Book Button */}
-          <a href="#booking" className="button-primary hidden md:inline-block">
+          <a href="#hero" className="button-primary hidden md:inline-block">
             {t.nav.book}
           </a>
 
@@ -158,7 +158,7 @@ export function Navigation() {
             {t.nav.location}
           </a>
           <a
-            href="#booking"
+            href="#hero"
             className="button-primary block text-center"
             onClick={() => setIsOpen(false)}
           >

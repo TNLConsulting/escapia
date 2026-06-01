@@ -35,7 +35,7 @@ export function Hero() {
           </div>
 
           <div className="flex items-center gap-4">
-            <a href="#booking" className="px-4 py-2 md:px-6 md:py-2 rounded-lg text-xs md:text-sm font-medium text-center" style={{ backgroundColor: "#9d7e44", color: "#1a1a1a" }}>
+            <a href="#hero" className="px-4 py-2 md:px-6 md:py-2 rounded-lg text-xs md:text-sm font-medium text-center" style={{ backgroundColor: "#9d7e44", color: "#1a1a1a" }}>
               Book
             </a>
           </div>

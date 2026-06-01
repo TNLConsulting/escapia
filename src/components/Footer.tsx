@@ -44,7 +44,7 @@ export function Footer() {
               <a href="#location" className="block text-xs md:text-sm transition-colors hover:text-opacity-80" style={{ color: "#666" }}>
                 Location
               </a>
-              <a href="#booking" className="block text-xs md:text-sm transition-colors hover:text-opacity-80" style={{ color: "#666" }}>
+              <a href="#hero" className="block text-xs md:text-sm transition-colors hover:text-opacity-80" style={{ color: "#666" }}>
                 Reservations
               </a>
             </nav>
