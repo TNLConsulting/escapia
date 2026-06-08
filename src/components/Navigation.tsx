@@ -42,13 +42,6 @@ export function Navigation() {
             {t.nav.dome}
           </a>
           <a
-            href="#amenities"
-            className="transition-colors duration-300 hover:opacity-70"
-            style={{ color: '#b8b8b8' }}
-          >
-            {t.nav.amenities}
-          </a>
-          <a
             href="#location"
             className="transition-colors duration-300 hover:opacity-70"
             style={{ color: '#b8b8b8' }}
@@ -140,14 +133,6 @@ export function Navigation() {
             onClick={() => setIsOpen(false)}
           >
             {t.nav.dome}
-          </a>
-          <a
-            href="#amenities"
-            className="block transition-colors"
-            style={{ color: '#b8b8b8' }}
-            onClick={() => setIsOpen(false)}
-          >
-            {t.nav.amenities}
           </a>
           <a
             href="#location"
