@@ -1,27 +1,37 @@
 "use client";
 
 import { Trees, Building2, Moon, Sparkles } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 
 export function Experience() {
-  const cards = [
-    { title: "Forest Immersion", desc: "Nestled deep within an ancient forest, our dome offers complete immersion in nature without sacrificing comfort.", Icon: Trees },
-    { title: "Living Architecture", desc: "The dome is crowned with a living moss roof, blending seamlessly into the forest canopy around it.", Icon: Building2 },
-    { title: "Starlit Nights", desc: "Floor-to-ceiling windows frame the forest by day and reveal starry skies by night.", Icon: Moon },
-    { title: "Boutique Luxury", desc: "Every detail has been carefully curated to create an exclusive sanctuary for discerning travelers.", Icon: Sparkles }
-  ];
+  const { language } = useLanguage();
+  const t = translations[language];
+
+  const cards = t.experience.cards.map((card) => {
+    const iconMap: { [key: string]: any } = {
+      "Forest Immersion": Trees,
+      "Living Architecture": Building2,
+      "Starlit Nights": Moon,
+      "Boutique Luxury": Sparkles,
+    };
+    return { ...card, Icon: iconMap[card.title] };
+  });
 
   return (
     <section id="experience" className="w-full py-20" style={{ background: "linear-gradient(to bottom, #000, #0a1a0f)" }}>
       <div className="max-w-7xl mx-auto px-6">
-        <p className="text-xs tracking-widest uppercase text-center mb-3" style={{ color: "#9d7e44" }}>The Experience</p>
+        <p className="text-xs tracking-widest uppercase text-center mb-3" style={{ color: "#9d7e44" }}>
+          {t.experience.title}
+        </p>
         <h2 className="text-4xl md:text-5xl font-serif font-light text-center mb-3" style={{ color: "#b8b8b8" }}>
-          Where Wilderness Meets
+          {t.experience.subtitle.split(" ").slice(0, -1).join(" ")}
         </h2>
         <h2 className="text-4xl md:text-5xl font-serif font-light text-center mb-8" style={{ color: "#9d7e44", fontStyle: "italic" }}>
-          Refined Living
+          {t.experience.subtitle.split(" ").pop()}
         </h2>
         <p className="text-center max-w-2xl mx-auto mb-16 text-sm" style={{ color: "#a8a8a8" }}>
-          Forêt Dôme is more than accommodation—it's a return to nature, reimagined for those who seek both adventure and elegance.
+          {t.experience.description}
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -36,7 +46,7 @@ export function Experience() {
                   <Icon size={32} style={{ color: "#1a1a1a" }} />
                 </div>
                 <h3 className="text-base font-serif font-light mb-3" style={{ color: "#b8b8b8" }}>{card.title}</h3>
-                <p className="text-xs" style={{ color: "#a8a8a8", lineHeight: "1.6" }}>{card.desc}</p>
+                <p className="text-xs" style={{ color: "#a8a8a8", lineHeight: "1.6" }}>{card.description}</p>
               </div>
             );
           })}

@@ -1,27 +1,41 @@
 "use client";
 
 import { Users, Wind, Droplet, Wifi, Coffee, Thermometer } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 
 export function Accommodations() {
-  const specs = [
-    { icon: Users, label: "2 Guests" },
-    { icon: Wind, label: "Twin Domes" },
-    { icon: Droplet, label: "Rain Shower" },
-    { icon: Wifi, label: "High-Speed WiFi" },
-    { icon: Coffee, label: "Nespresso" },
-    { icon: Thermometer, label: "Climate Control" }
-  ];
+  const { language } = useLanguage();
+  const t = translations[language];
+
+  const iconMap: { [key: string]: any } = {
+    "2 guests": Users,
+    "Twin domes": Wind,
+    "Rain shower": Droplet,
+    "Regendouche": Droplet,
+    "High-speed WiFi": Wifi,
+    "Snelle wifi": Wifi,
+    "Nespresso": Coffee,
+    "Air conditioning": Thermometer,
+    "Airco": Thermometer,
+  };
+
+  const specs = t.accommodations.specs.map((label) => ({
+    label,
+    icon: iconMap[label] || Users,
+  }));
 
   return (
     <section id="accommodations" className="w-full py-20" style={{ background: "linear-gradient(to bottom, #0a1a0f, #000)" }}>
       <div className="max-w-7xl mx-auto px-6">
-        <p className="text-sm tracking-widest uppercase text-center mb-2" style={{ color: "#9d7e44" }}>Your Sanctuary</p>
+        <p className="text-sm tracking-widest uppercase text-center mb-2" style={{ color: "#9d7e44" }}>
+          {t.accommodations.title}
+        </p>
         <h2 className="text-5xl font-serif font-light text-center mb-6" style={{ color: "#b8b8b8" }}>
-          The <span style={{ color: "#9d7e44" }}>Dome</span>
+          The <span style={{ color: "#9d7e44" }}>{t.accommodations.description}</span>
         </h2>
         <p className="text-center max-w-3xl mx-auto mb-12" style={{ color: "#a8a8a8" }}>
-          Two connected domes create one intimate sanctuary — a living space and sleeping retreat<br />
-          linked by a wooden corridor, designed exclusively for two.
+          {t.accommodations.twinDomeDesc}
         </p>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -33,10 +47,10 @@ export function Accommodations() {
           {/* Right - Content */}
           <div>
             <h3 className="text-4xl font-serif font-light mb-6 tracking-wide" style={{ color: "#b8b8b8", letterSpacing: "0.05em" }}>
-              Two Domes, One Experience
+              {t.accommodations.twinDomeTitle}
             </h3>
             <p className="text-base mb-8 font-light" style={{ color: "#a8a8a8", lineHeight: "1.9", letterSpacing: "0.01em" }}>
-              Wake up in a cocoon of glass and moss. Our unique twin-dome structure offers the perfect balance of openness and intimacy — a spacious living dome flows into a cozy sleeping sanctuary, all wrapped in the embrace of the ancient forest.
+              {t.accommodations.extraDesc[0]}
             </p>
 
             {/* Icons Grid */}
@@ -77,19 +91,15 @@ export function Accommodations() {
           {/* Right - Content */}
           <div className="order-1 md:order-2">
             <h3 className="text-4xl font-serif font-light mb-6 tracking-wide" style={{ color: "#b8b8b8", letterSpacing: "0.05em" }}>
-              Where Forest Meets Comfort
+              {t.accommodations.description}
             </h3>
             <p className="text-base mb-8 font-light" style={{ color: "#a8a8a8", lineHeight: "1.9", letterSpacing: "0.01em" }}>
-              Every detail has been crafted for your escape. A king-size bed faces panoramic windows that frame the forest canopy. The rain shower brings nature inside, while the living dome offers a space to unwind, sip morning coffee, and simply breathe.
+              {t.accommodations.extraDesc.slice(1).join(" ")}
             </p>
 
             {/* Bullet Points */}
             <ul className="space-y-3 mb-8">
-              {[
-                "Private wooden terrace overlooking the forest",
-                "Floor-to-ceiling windows with forest views",
-                "Living moss roof that breathes with nature"
-              ].map((item, i) => (
+              {t.accommodations.features.map((item: string, i: number) => (
                 <li key={i} className="flex items-start gap-4 text-sm" style={{ color: "#a8a8a8" }}>
                   <span style={{ color: "#9d7e44", marginTop: "4px" }}>●</span>
                   <span>{item}</span>

@@ -1,8 +1,13 @@
 "use client";
 
 import { Send, Heart } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 
 export function Footer() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <footer style={{ backgroundColor: "#0a0a0a", borderTop: "1px solid rgba(157, 126, 68, 0.1)" }}>
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16">
@@ -14,7 +19,7 @@ export function Footer() {
               Forêt Dôme
             </h3>
             <p className="text-xs md:text-sm mb-6 md:mb-8" style={{ color: "#666", lineHeight: "1.8" }}>
-              Disconnect to reconnect. An exclusive dome hideaway in nature, designed for two, nestled deep in the Belgian forest in Lille.
+              {t.footer.tagline} {t.footer.about}
             </p>
             <div className="flex gap-4">
               <a href="https://www.instagram.com/escapia.be/" target="_blank" rel="noopener noreferrer" className="transition-colors hover:opacity-80" style={{ color: "#9d7e44" }}>
@@ -30,19 +35,16 @@ export function Footer() {
             </h4>
             <nav className="space-y-2 md:space-y-3">
               <a href="#experience" className="block text-xs md:text-sm transition-colors hover:text-opacity-80" style={{ color: "#666" }}>
-                The Experience
+                {t.footer.links.experience}
               </a>
               <a href="#accommodations" className="block text-xs md:text-sm transition-colors hover:text-opacity-80" style={{ color: "#666" }}>
-                The Dome
-              </a>
-              <a href="#amenities" className="block text-xs md:text-sm transition-colors hover:text-opacity-80" style={{ color: "#666" }}>
-                Amenities
+                {t.footer.links.dome}
               </a>
               <a href="#location" className="block text-xs md:text-sm transition-colors hover:text-opacity-80" style={{ color: "#666" }}>
-                Location
+                {t.footer.links.location}
               </a>
               <a href="#hero" className="block text-xs md:text-sm transition-colors hover:text-opacity-80" style={{ color: "#666" }}>
-                Reservations
+                {t.footer.links.reservations}
               </a>
             </nav>
           </div>
@@ -50,12 +52,12 @@ export function Footer() {
           {/* Right - Contact */}
           <div>
             <h4 className="text-xs md:text-sm font-serif tracking-widest uppercase mb-4 md:mb-6" style={{ color: "#9d7e44" }}>
-              Contact
+              {t.footer.contact}
             </h4>
             <div className="space-y-1 md:space-y-2 text-xs md:text-sm" style={{ color: "#666" }}>
               <p>
-                <a href="mailto:info@escapia.be" className="transition-colors hover:text-opacity-80">
-                  📧 info@escapia.be
+                <a href={`mailto:${t.footer.email}`} className="transition-colors hover:text-opacity-80">
+                  📧 {t.footer.email}
                 </a>
               </p>
               <p>Bosuilweg 19</p>
@@ -69,13 +71,13 @@ export function Footer() {
 
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 md:gap-4 text-xs" style={{ color: "#555" }}>
-          <p className="text-xs">© 2026 Escapia. All rights reserved.</p>
+          <p className="text-xs">{t.footer.copyright}</p>
           <div className="flex gap-4 md:gap-6 text-xs">
             <a href="/privacy" className="transition-colors hover:text-opacity-80" style={{ color: "#555" }}>
-              Privacy Policy
+              {t.footer.links.privacy}
             </a>
             <a href="/terms" className="transition-colors hover:text-opacity-80" style={{ color: "#555" }}>
-              Terms of Service
+              {t.footer.links.terms}
             </a>
           </div>
         </div>

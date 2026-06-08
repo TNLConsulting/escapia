@@ -1,8 +1,13 @@
 "use client";
 
 import { MapPin, Train, Plane, Clock } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 
 export function Location() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <section id="location" className="w-full py-12 md:py-20" style={{ backgroundColor: "#000" }}>
       <div className="max-w-7xl mx-auto px-4 md:px-6">
@@ -10,13 +15,13 @@ export function Location() {
           {/* Left - Info */}
           <div>
             <p className="text-xs tracking-widest uppercase mb-2 md:mb-4" style={{ color: "#9d7e44" }}>
-              Location
+              {t.location.title}
             </p>
             <h2 className="text-3xl md:text-5xl font-serif font-light mb-6 md:mb-8" style={{ color: "#b8b8b8" }}>
-              Hidden in Plain <span style={{ color: "#9d7e44", fontStyle: "italic" }}>Sight</span>
+              {t.location.subtitle.split(" ").slice(0, -1).join(" ")} <span style={{ color: "#9d7e44", fontStyle: "italic" }}>{t.location.subtitle.split(" ").pop()}</span>
             </h2>
             <p className="mb-8 md:mb-12 leading-relaxed text-sm md:text-base" style={{ color: "#a8a8a8" }}>
-              Escapia is nestled within the peaceful surroundings of Lille in Vlaams Gewest, offering the perfect balance of seclusion and accessibility. Just minutes from the city, yet worlds away from the everyday.
+              {t.location.description}
             </p>
 
             {/* Address */}
@@ -28,9 +33,8 @@ export function Location() {
                 <h3 className="text-sm md:text-base font-serif font-light mb-2" style={{ color: "#b8b8b8" }}>
                   Address
                 </h3>
-                <p style={{ color: "#a8a8a8", fontSize: "14px" }}>
-                  Bosuilweg 19, 2275 Lille<br />
-                  Vlaams Gewest, Belgium
+                <p style={{ color: "#a8a8a8", fontSize: "14px", whiteSpace: "pre-wrap" }}>
+                  {t.location.address}
                 </p>
               </div>
             </div>
@@ -42,11 +46,10 @@ export function Location() {
               </div>
               <div>
                 <h3 className="text-sm md:text-base font-serif font-light mb-2" style={{ color: "#b8b8b8" }}>
-                  By Train
+                  {t.location.transportation.title}
                 </h3>
-                <p style={{ color: "#a8a8a8", fontSize: "14px" }}>
-                  Antwerpen-Centraal station: 30 minutes by car<br />
-                  Complimentary pickup available
+                <p style={{ color: "#a8a8a8", fontSize: "14px", whiteSpace: "pre-wrap" }}>
+                  {t.location.transportation.train}
                 </p>
               </div>
             </div>
@@ -60,9 +63,8 @@ export function Location() {
                 <h3 className="text-sm md:text-base font-serif font-light mb-2" style={{ color: "#b8b8b8" }}>
                   By Air
                 </h3>
-                <p style={{ color: "#a8a8a8", fontSize: "14px" }}>
-                  Antwerp Airport (ANR): 25 minutes<br />
-                  Brussels Airport (BRU): 45 minutes
+                <p style={{ color: "#a8a8a8", fontSize: "14px", whiteSpace: "pre-wrap" }}>
+                  {t.location.transportation.air}
                 </p>
               </div>
             </div>
@@ -74,20 +76,20 @@ export function Location() {
               </div>
               <div>
                 <h3 className="text-sm md:text-base font-serif font-light mb-2" style={{ color: "#b8b8b8" }}>
-                  Check-in Times
+                  {t.location.checkInTimes.title}
                 </h3>
                 <p style={{ color: "#a8a8a8", fontSize: "14px" }}>
-                  Check-in: 15:00 | Check-out: 11:00<br />
-                  Early/late options available on request
+                  {t.location.checkInTimes.checkIn} | {t.location.checkInTimes.checkOut}<br />
+                  {t.location.checkInTimes.earlyLate}
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Right - Map */}
-          <div className="rounded-lg overflow-hidden h-64 md:h-96">
+          {/* Right - Google Map */}
+          <div className="w-full h-96 md:h-full min-h-96 rounded-lg overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2514.7632654!2d4.565123!3d51.232945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f3a8f3a8f3a9%3A0x1b5c5c5c5c5c5c5c!2sBosuilweg%2019%2C%202275%20Lille%2C%20Belgium!5e0!3m2!1sen!2sbe!4v1717349400000"
+              src={`https://maps.google.com/maps?q=Bosuilweg+19,+2275+Lille,+Belgium&t=&z=13&ie=UTF8&iwloc=&output=embed`}
               width="100%"
               height="100%"
               style={{ border: 0 }}
