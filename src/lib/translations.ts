@@ -65,6 +65,10 @@ export const translations = {
         "Floor-to-ceiling windows with panoramic nature views",
         "Living moss roof that seamlessly blends with the surroundings",
       ],
+      cta: {
+        checkAvailability: "Check Availability",
+        reserveEscape: "Reserve Your Escape",
+      },
     },
     amenities: {
       title: "Services & Amenities",
@@ -173,6 +177,10 @@ export const translations = {
         "Vloer-tot-plafond ramen met panoramisch natuurzicht",
         "Levend mosdak dat naadloos opgaat in de omgeving",
       ],
+      cta: {
+        checkAvailability: "Bekijk beschikbaarheid",
+        reserveEscape: "Reserveer Nu",
+      },
     },
     amenities: {
       title: "Services & Amenities",

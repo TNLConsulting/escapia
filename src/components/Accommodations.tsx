@@ -76,7 +76,7 @@ export function Accommodations() {
                 color: "#1a1a1a",
               }}
             >
-              Check Availability
+              {t.accommodations.cta.checkAvailability}
             </a>
           </div>
         </div>
@@ -115,7 +115,7 @@ export function Accommodations() {
                 color: "#1a1a1a",
               }}
             >
-              Reserve Your Escape
+              {t.accommodations.cta.reserveEscape}
             </a>
           </div>
         </div>
