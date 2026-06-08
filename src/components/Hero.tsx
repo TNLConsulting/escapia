@@ -30,7 +30,6 @@ export function Hero() {
           <div className="hidden md:flex gap-8">
             <a href="#experience" className="text-sm tracking-widest uppercase" style={{ color: "#a8a8a8" }}>{t.nav.experience}</a>
             <a href="#accommodations" className="text-sm tracking-widest uppercase" style={{ color: "#a8a8a8" }}>{t.nav.dome}</a>
-            <a href="#amenities" className="text-sm tracking-widest uppercase" style={{ color: "#a8a8a8" }}>{t.nav.amenities}</a>
             <a href="#location" className="text-sm tracking-widest uppercase" style={{ color: "#a8a8a8" }}>{t.nav.location}</a>
           </div>
 
