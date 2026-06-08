@@ -24,11 +24,8 @@ export function Experience() {
         <p className="text-xs tracking-widest uppercase text-center mb-3" style={{ color: "#9d7e44" }}>
           {t.experience.title}
         </p>
-        <h2 className="text-4xl md:text-5xl font-serif font-light text-center mb-3" style={{ color: "#b8b8b8" }}>
-          {t.experience.subtitle.split(" ").slice(0, -1).join(" ")}
-        </h2>
-        <h2 className="text-4xl md:text-5xl font-serif font-light text-center mb-8" style={{ color: "#9d7e44", fontStyle: "italic" }}>
-          {t.experience.subtitle.split(" ").pop()}
+        <h2 className="text-4xl md:text-5xl font-serif font-light text-center mb-8" style={{ color: "#b8b8b8" }}>
+          {t.experience.subtitle}
         </h2>
         <p className="text-center max-w-2xl mx-auto mb-16 text-sm" style={{ color: "#a8a8a8" }}>
           {t.experience.description}
