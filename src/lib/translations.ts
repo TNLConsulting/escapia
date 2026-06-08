@@ -127,7 +127,7 @@ export const translations = {
     },
     experience: {
       title: "The Experience",
-      subtitle: "Waar wilderness en luxury perfect samenkomen",
+      subtitle: "Waar de natuur en luxe perfect samenkomen",
       description: "Forêt Dôme is niet zomaar een overnachting. Het is een ontsnapping aan de dagelijkse drukte, midden in de natuur, gecombineerd met het comfort en de elegantie van een high-end verblijf. Ontworpen voor gasten die op zoek zijn naar rust, avontuur en een unieke ervaring.",
       cards: [
         {
