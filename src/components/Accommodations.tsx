@@ -32,7 +32,7 @@ export function Accommodations() {
           {t.accommodations.title}
         </p>
         <h2 className="text-5xl font-serif font-light text-center mb-6" style={{ color: "#b8b8b8" }}>
-          The <span style={{ color: "#9d7e44" }}>{t.accommodations.description}</span>
+          <span style={{ color: "#9d7e44" }}>{t.accommodations.description}</span>
         </h2>
         <p className="text-center max-w-3xl mx-auto mb-12" style={{ color: "#a8a8a8" }}>
           {t.accommodations.twinDomeDesc}
