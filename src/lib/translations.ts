@@ -83,7 +83,7 @@ export const translations = {
       address: "Bosuilweg 19\n2275 Lille, Belgium",
       transportation: {
         title: "Getting Here",
-        train: "Antwerp Central Station: 30 minutes drive\nFree pick-up service available upon request",
+        train: "Antwerp Central Station: 30 minutes drive\nPick-up service available upon request",
         air: "Antwerp Airport (ANR): 25 minutes\nBrussels Airport (BRU): 45 minutes",
       },
       checkInTimes: {
@@ -195,7 +195,7 @@ export const translations = {
       address: "Bosuilweg 19\n2275 Lille, België",
       transportation: {
         title: "Hoe je hier komt",
-        train: "Antwerpen-Centraal: 30 minuten rijden\nGratis ophaalservice beschikbaar op aanvraag",
+        train: "Antwerpen-Centraal: 30 minuten rijden\nOphaalservice beschikbaar op aanvraag",
         air: "Antwerp Airport (ANR): 25 minuten\nBrussels Airport (BRU): 45 minuten",
       },
       checkInTimes: {
