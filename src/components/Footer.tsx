@@ -70,8 +70,14 @@ export function Footer() {
         <div style={{ borderTop: "1px solid rgba(157, 126, 68, 0.1)", margin: "1.5rem 0", marginBottom: "1.5rem" }} />
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 md:gap-4 text-xs" style={{ color: "#555" }}>
-          <p className="text-xs">{t.footer.copyright}</p>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-4">
+          <div className="text-xs" style={{ color: "#555" }}>
+            <p className="mb-2">{t.footer.copyright}</p>
+            <div className="text-xs font-light" style={{ color: "#666" }}>
+              <p className="font-semibold" style={{ color: "#9d7e44" }}>BLT BV</p>
+              <p>VAT: BE1017371830</p>
+            </div>
+          </div>
           <div className="flex gap-4 md:gap-6 text-xs">
             <a href="/privacy" className="transition-colors hover:text-opacity-80" style={{ color: "#555" }}>
               {t.footer.links.privacy}

@@ -22,6 +22,9 @@ export default function TermsPage() {
             <p>
               By accessing and using the Forêt Dôme website (escapia.be) and making a reservation, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website or make a reservation.
             </p>
+            <p className="mt-4">
+              <strong>Contracting Party:</strong> Your reservation agreement is with <strong>BLT BV</strong>, a company registered in Belgium with VAT number <strong>BE1017371830</strong>. Forêt Dôme is a property managed by BLT BV. Any reference to "Escapia" or "we" in these terms refers to BLT BV as the legal entity.
+            </p>
           </section>
 
           <section>
@@ -39,7 +42,7 @@ export default function TermsPage() {
               2.2 Confirmation
             </h3>
             <p>
-              A reservation is only confirmed once payment is received and a confirmation email is sent to the email address provided. Confirmation is a binding contract between you and Escapia.
+              A reservation is only confirmed once payment is received and a confirmation email is sent to the email address provided. Confirmation is a binding contract between you and <strong>BLT BV</strong>.
             </p>
 
             <h3 className="text-lg font-serif mb-2 mt-4" style={{ color: "#9d7e44" }}>

@@ -1,29 +1,12 @@
 "use client";
 
-import { Users, Wind, Droplet, Wifi, Coffee, Thermometer } from "lucide-react";
+import { Check, Plus } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
 
 export function Accommodations() {
   const { language } = useLanguage();
   const t = translations[language];
-
-  const iconMap: { [key: string]: any } = {
-    "2 guests": Users,
-    "Twin domes": Wind,
-    "Rain shower": Droplet,
-    "Regendouche": Droplet,
-    "High-speed WiFi": Wifi,
-    "Snelle wifi": Wifi,
-    "Nespresso": Coffee,
-    "Air conditioning": Thermometer,
-    "Airco": Thermometer,
-  };
-
-  const specs = t.accommodations.specs.map((label) => ({
-    label,
-    icon: iconMap[label] || Users,
-  }));
 
   return (
     <section id="accommodations" className="w-full py-20" style={{ background: "linear-gradient(to bottom, #0a1a0f, #000)" }}>
@@ -53,19 +36,37 @@ export function Accommodations() {
               {t.accommodations.extraDesc[0]}
             </p>
 
-            {/* Icons Grid */}
-            <div className="grid grid-cols-3 gap-6 mb-8">
-              {specs.map((spec, i) => {
-                const Icon = spec.icon;
-                return (
-                  <div key={i} className="text-center">
-                    <div className="mb-3 flex justify-center">
-                      <Icon size={28} style={{ color: "#9d7e44" }} />
-                    </div>
-                    <p className="text-xs" style={{ color: "#a8a8a8" }}>{spec.label}</p>
-                  </div>
-                );
-              })}
+            {/* Included & Optional Services */}
+            <div className="space-y-8 mb-8">
+              {/* Included */}
+              <div>
+                <h4 className="text-sm tracking-widest uppercase font-semibold mb-4" style={{ color: "#9d7e44" }}>
+                  {t.accommodations.included.title}
+                </h4>
+                <ul className="space-y-2">
+                  {t.accommodations.included.items.map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-sm" style={{ color: "#a8a8a8" }}>
+                      <Check size={18} style={{ color: "#9d7e44", flexShrink: 0 }} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Optional */}
+              <div>
+                <h4 className="text-sm tracking-widest uppercase font-semibold mb-4" style={{ color: "#9d7e44" }}>
+                  {t.accommodations.optional.title}
+                </h4>
+                <ul className="space-y-2">
+                  {t.accommodations.optional.items.map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-sm" style={{ color: "#a8a8a8" }}>
+                      <Plus size={18} style={{ color: "#9d7e44", flexShrink: 0 }} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
             <a

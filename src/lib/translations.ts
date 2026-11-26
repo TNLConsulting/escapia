@@ -52,14 +52,21 @@ export const translations = {
         "The rain shower brings the outside in.",
         "The living dome offers space to slow down, enjoy and simply be.",
       ],
-      specs: [
-        "2 guests",
-        "Twin domes",
-        "Rain shower",
-        "High-speed WiFi",
-        "Nespresso",
-        "Air conditioning",
-      ],
+      included: {
+        title: "What's Included",
+        items: [
+          "Bed linens",
+          "Towels",
+          "End-of-stay cleaning",
+        ],
+      },
+      optional: {
+        title: "Optional Extras",
+        items: [
+          "Extra cleaning service during your stay",
+          "Breakfast upon request",
+        ],
+      },
       features: [
         "Private wooden terrace with forest views",
         "Floor-to-ceiling windows with panoramic nature views",
@@ -164,14 +171,21 @@ export const translations = {
         "De regendouche brengt buiten naar binnen.",
         "De living dome biedt ruimte om te vertragen, te genieten en gewoon te zijn.",
       ],
-      specs: [
-        "2 gasten",
-        "Twin domes",
-        "Regendouche",
-        "Snelle wifi",
-        "Nespresso",
-        "Airco",
-      ],
+      included: {
+        title: "Inbegrepen",
+        items: [
+          "Bedlinnen",
+          "Handdoeken",
+          "Eindschoonmaak na het verblijf",
+        ],
+      },
+      optional: {
+        title: "Optionele Extras",
+        items: [
+          "Extra schoonmaakmoment tijdens je verblijf",
+          "Ontbijt op aanvraag",
+        ],
+      },
       features: [
         "Privé houten terras met uitzicht op het bos",
         "Vloer-tot-plafond ramen met panoramisch natuurzicht",
