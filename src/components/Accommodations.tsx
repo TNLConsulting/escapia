@@ -21,9 +21,9 @@ export function Accommodations() {
           {t.accommodations.twinDomeDesc}
         </p>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-start">
           {/* Left - Photo */}
-          <div className="rounded-lg overflow-hidden h-96">
+          <div className="rounded-lg overflow-hidden h-64 md:h-96 w-full">
             <img src="/dome-lounge-landscape.jpg" alt="Twin dome interior - living room" className="w-full h-full object-cover rounded-lg" style={{ objectPosition: "center center" }} />
           </div>
 
@@ -83,9 +83,9 @@ export function Accommodations() {
         </div>
 
         {/* Where Forest Meets Comfort Section */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mt-20">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center mt-16 md:mt-20">
           {/* Left - Photo */}
-          <div className="rounded-lg overflow-hidden h-80 order-2 md:order-1">
+          <div className="rounded-lg overflow-hidden h-60 md:h-80 order-2 md:order-1 w-full">
             <img src="/dome-bedroom-landscape.jpg" alt="Luxury bedroom with skylight" className="w-full h-full object-cover rounded-lg" style={{ objectPosition: "center center" }} />
           </div>
 

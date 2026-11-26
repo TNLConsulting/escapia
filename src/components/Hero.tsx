@@ -15,7 +15,7 @@ export function Hero() {
         backgroundImage: "linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('/hero-exterior.jpg')",
         backgroundColor: "#000",
         backgroundSize: "cover",
-        backgroundPosition: "center 40%",
+        backgroundPosition: "center 25%",
         backgroundAttachment: "auto",
         backgroundRepeat: "no-repeat",
       }}

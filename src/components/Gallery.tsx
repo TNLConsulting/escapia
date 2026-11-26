@@ -75,7 +75,7 @@ export function Gallery() {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative mx-auto overflow-hidden rounded-lg" style={{ aspectRatio: "16 / 9", maxWidth: "900px" }}>
+        <div className="relative mx-auto overflow-hidden rounded-lg w-full md:w-auto px-3 md:px-0" style={{ aspectRatio: "16 / 9", maxWidth: "900px" }}>
           {/* Images */}
           <div
             className="relative w-full h-full"

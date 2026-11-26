@@ -65,6 +65,7 @@ export const translations = {
         items: [
           "Extra cleaning service during your stay",
           "Breakfast upon request",
+          "Bathroom essentials (shampoo & shower gel)",
         ],
       },
       features: [
@@ -184,6 +185,7 @@ export const translations = {
         items: [
           "Extra schoonmaakmoment tijdens je verblijf",
           "Ontbijt op aanvraag",
+          "Badkamer essentials (shampoo & douchegel)",
         ],
       },
       features: [
