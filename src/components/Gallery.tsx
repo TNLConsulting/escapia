@@ -20,6 +20,8 @@ export function Gallery() {
     "/gallery-08.jpg",
     "/gallery-09.jpg",
     "/gallery-10.jpg",
+    "/gallery-11.jpg",
+    "/gallery-12.jpg",
   ];
 
   const handlePrevious = () => {
