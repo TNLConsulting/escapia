@@ -8,18 +8,32 @@ export function Hero() {
   const t = translations[language];
 
   return (
-    <section
-      id="hero"
-      className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden pt-20 md:pt-0"
-      style={{
-        backgroundImage: "linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('/hero-exterior.jpg')",
-        backgroundColor: "#000",
-        backgroundSize: "cover",
-        backgroundPosition: "center 25%",
-        backgroundAttachment: "auto",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <>
+      <style>{`
+        @media (max-width: 768px) {
+          #hero {
+            background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('/hero-mobile.jpg');
+            background-position: center 50%;
+            background-size: cover;
+          }
+        }
+        @media (min-width: 769px) {
+          #hero {
+            background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('/hero-exterior.jpg');
+            background-position: center 25%;
+            background-size: cover;
+          }
+        }
+      `}</style>
+      <section
+        id="hero"
+        className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden pt-20 md:pt-0"
+        style={{
+          backgroundColor: "#000",
+          backgroundAttachment: "auto",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
       {/* Navigation (Fixed/Sticky) */}
       <nav className="fixed top-0 left-0 right-0 w-full px-3 md:px-6 py-4 md:py-6 z-50">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -110,6 +124,7 @@ export function Hero() {
         <p className="text-xs tracking-widest uppercase mb-2 font-semibold" style={{ color: "#ffffff" }}>{language === 'nl' ? 'Scroll' : 'Scroll'}</p>
         <div className="animate-bounce text-lg" style={{ color: "#ffffff" }}>↓</div>
       </div>
-    </section>
+      </section>
+    </>
   );
 }
