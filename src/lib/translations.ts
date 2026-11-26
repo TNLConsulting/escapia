@@ -58,6 +58,7 @@ export const translations = {
           "Bed linens",
           "Towels",
           "End-of-stay cleaning",
+          "Bathroom essentials (shampoo & shower gel)",
         ],
       },
       optional: {
@@ -65,7 +66,6 @@ export const translations = {
         items: [
           "Extra cleaning service during your stay",
           "Breakfast upon request",
-          "Bathroom essentials (shampoo & shower gel)",
         ],
       },
       features: [
@@ -178,6 +178,7 @@ export const translations = {
           "Bedlinnen",
           "Handdoeken",
           "Eindschoonmaak na het verblijf",
+          "Badkamer essentials (shampoo & douchegel)",
         ],
       },
       optional: {
@@ -185,7 +186,6 @@ export const translations = {
         items: [
           "Extra schoonmaakmoment tijdens je verblijf",
           "Ontbijt op aanvraag",
-          "Badkamer essentials (shampoo & douchegel)",
         ],
       },
       features: [
