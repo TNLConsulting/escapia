@@ -23,14 +23,14 @@ export function Hero() {
       {/* Navigation (Fixed/Sticky) */}
       <nav className="fixed top-0 left-0 right-0 w-full px-3 md:px-6 py-4 md:py-6 z-50">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <a href="#" className="font-serif text-2xl tracking-wider" style={{ color: "#9d7e44" }}>
+          <a href="#" className="font-serif text-2xl tracking-wider" style={{ color: "#ffffff" }}>
             Forêt Dôme
           </a>
 
           <div className="hidden md:flex gap-8">
-            <a href="#experience" className="text-sm tracking-widest uppercase" style={{ color: "#a8a8a8" }}>{t.nav.experience}</a>
-            <a href="#accommodations" className="text-sm tracking-widest uppercase" style={{ color: "#a8a8a8" }}>{t.nav.dome}</a>
-            <a href="#location" className="text-sm tracking-widest uppercase" style={{ color: "#a8a8a8" }}>{t.nav.location}</a>
+            <a href="#experience" className="text-sm tracking-widest uppercase font-medium" style={{ color: "#ffffff" }}>{t.nav.experience}</a>
+            <a href="#accommodations" className="text-sm tracking-widest uppercase font-medium" style={{ color: "#ffffff" }}>{t.nav.dome}</a>
+            <a href="#location" className="text-sm tracking-widest uppercase font-medium" style={{ color: "#ffffff" }}>{t.nav.location}</a>
           </div>
 
           <div className="flex items-center gap-4">
@@ -38,19 +38,19 @@ export function Hero() {
               <button
                 onClick={() => setLanguage('en')}
                 className={`px-3 py-1 text-xs font-medium rounded ${language === 'en' ? 'text-white' : 'text-gray-400'}`}
-                style={{ color: language === 'en' ? '#9d7e44' : '#a8a8a8' }}
+                style={{ color: language === 'en' ? '#ffffff' : '#d0d0d0' }}
               >
                 EN
               </button>
               <button
                 onClick={() => setLanguage('nl')}
                 className={`px-3 py-1 text-xs font-medium rounded ${language === 'nl' ? 'text-white' : 'text-gray-400'}`}
-                style={{ color: language === 'nl' ? '#9d7e44' : '#a8a8a8' }}
+                style={{ color: language === 'nl' ? '#ffffff' : '#d0d0d0' }}
               >
                 NL
               </button>
             </div>
-            <a href="#hero" className="px-4 py-2 md:px-6 md:py-2 rounded-lg text-xs md:text-sm font-medium text-center" style={{ backgroundColor: "#9d7e44", color: "#1a1a1a" }}>
+            <a href="#hero" className="px-4 py-2 md:px-6 md:py-2 rounded-lg text-xs md:text-sm font-medium text-center hover:opacity-90 transition-opacity" style={{ backgroundColor: "#ffffff", color: "#1a1a1a" }}>
               {t.nav.book}
             </a>
           </div>
@@ -59,11 +59,11 @@ export function Hero() {
 
       {/* Content */}
       <div className="text-center max-w-3xl mx-auto px-6">
-        <p className="text-xs md:text-sm tracking-widest uppercase mb-4 md:mb-6" style={{ color: "#9d7e44" }}>{t.hero.label}</p>
-        <h1 className="font-serif text-4xl md:text-7xl font-light leading-tight mb-6 md:mb-8" style={{ color: "#b8b8b8" }}>
+        <p className="text-xs md:text-sm tracking-widest uppercase mb-4 md:mb-6 font-semibold" style={{ color: "#ffffff" }}>{t.hero.label}</p>
+        <h1 className="font-serif text-5xl md:text-8xl font-light leading-tight mb-6 md:mb-8" style={{ color: "#ffffff" }}>
           {t.hero.title}
         </h1>
-        <p className="text-base md:text-xl mb-8 md:mb-10" style={{ color: "#a8a8a8" }}>
+        <p className="text-lg md:text-2xl mb-8 md:mb-10 font-light" style={{ color: "#ffffff" }}>
           {t.hero.subtitle}
         </p>
         {/* 
@@ -107,8 +107,8 @@ export function Hero() {
 
       {/* Scroll */}
       <div className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 text-center">
-        <p className="text-xs tracking-widest uppercase mb-2" style={{ color: "#a8a8a8" }}>{language === 'nl' ? 'Scroll' : 'Scroll'}</p>
-        <div className="animate-bounce" style={{ color: "#9d7e44" }}>↓</div>
+        <p className="text-xs tracking-widest uppercase mb-2 font-semibold" style={{ color: "#ffffff" }}>{language === 'nl' ? 'Scroll' : 'Scroll'}</p>
+        <div className="animate-bounce text-lg" style={{ color: "#ffffff" }}>↓</div>
       </div>
     </section>
   );
