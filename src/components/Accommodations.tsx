@@ -41,7 +41,7 @@ export function Accommodations() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Left - Photo */}
           <div className="rounded-lg overflow-hidden h-96">
-            <img src="/dome-interior-lounge.jpg" alt="Twin dome interior - living room" className="w-full h-full object-cover rounded-lg" style={{ objectPosition: "center center" }} />
+            <img src="/dome-lounge-landscape.jpg" alt="Twin dome interior - living room" className="w-full h-full object-cover rounded-lg" style={{ objectPosition: "center center" }} />
           </div>
 
           {/* Right - Content */}
@@ -85,7 +85,7 @@ export function Accommodations() {
         <div className="grid md:grid-cols-2 gap-12 items-center mt-20">
           {/* Left - Photo */}
           <div className="rounded-lg overflow-hidden h-80 order-2 md:order-1">
-            <img src="/dome-bedroom.jpg" alt="Luxury bedroom with skylight" className="w-full h-full object-cover rounded-lg" style={{ objectPosition: "center center" }} />
+            <img src="/dome-bedroom-landscape.jpg" alt="Luxury bedroom with skylight" className="w-full h-full object-cover rounded-lg" style={{ objectPosition: "center center" }} />
           </div>
 
           {/* Right - Content */}
