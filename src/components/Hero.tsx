@@ -12,10 +12,10 @@ export function Hero() {
       id="hero"
       className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden pt-20 md:pt-0"
       style={{
-        backgroundImage: "linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('/dome-twin.jpg')",
+        backgroundImage: "linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('/hero-exterior.jpg')",
         backgroundColor: "#000",
         backgroundSize: "cover",
-        backgroundPosition: "center 60%",
+        backgroundPosition: "center 40%",
         backgroundAttachment: "auto",
         backgroundRepeat: "no-repeat",
       }}
